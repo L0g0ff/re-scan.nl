@@ -1,0 +1,18 @@
+# Redirects for migrated blog posts from WordPress to static site
+# Format: old_path new_path status_code
+
+# Main blog post redirect
+/waarom-je-beter-kunt-stoppen-met-mail-alerts/ /blog/waarom-stoppen-mail-alerts.html 301
+
+# Add more redirects here for other blog posts as you migrate them
+# /old-blog-post-url/ /blog/new-blog-post.html 301
+
+# Generic blog redirects
+/blog/ /blog/ 200
+/category/* /blog/ 301
+/tag/* /blog/ 301
+
+# Catch-all for WordPress admin and other paths that don't exist
+/wp-admin/* / 301
+/wp-content/* / 301
+/wp-includes/* / 301
