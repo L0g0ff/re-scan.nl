@@ -1,8 +1,9 @@
 # Redirects for migrated blog posts from WordPress to static site
 # Format: old_path new_path status_code
 
-# Main blog post redirect
+# Main blog post redirects
 /waarom-je-beter-kunt-stoppen-met-mail-alerts/ /blog/waarom-stoppen-mail-alerts.html 301
+/hoe-re-scan-monitor-solutions-scholen-helpt-met-informatiebeveiliging-en-privacy/ /blog/scholen-informatiebeveiliging-privacy.html 301
 
 # Add more redirects here for other blog posts as you migrate them
 # /old-blog-post-url/ /blog/new-blog-post.html 301
