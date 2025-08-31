@@ -1,0 +1,14 @@
+# GitHub Pages configuration
+title: "Re-Scan Monitor Solutions"
+description: "Professional network monitoring solutions using PRTG for real-time performance tracking and security enhancement"
+url: "https://thomasvanderberg.github.io"
+baseurl: "/re-scan.nl"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Exclude files from processing
+exclude:
+  - README.md
+  - .gitignore

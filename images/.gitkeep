@@ -1,0 +1,10 @@
+# Images Directory
+
+Place your images in this directory:
+
+- logo.png - Company logo (recommended size: 200x80px)
+- favicon.ico - Website favicon (16x16px)
+- hero-bg.jpg - Optional hero background image
+- Any other images used on the website
+
+Note: The website currently uses placeholder SVG icons and CSS gradients for visual elements. You can replace these with actual images as needed.
