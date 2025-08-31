@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WMI Gebruikersrechten op een Verantwoorde Manier - Re-Scan Monitor Solutions</title>
+    <meta name="description" content="Leer hoe je WMI gebruikersrechten veilig configureert voor PRTG monitoring volgens het Zero Trust principe. Praktische stappen en best practices.">
+    <meta name="author" content="Thomas">
+    <meta name="keywords" content="WMI rechten, PRTG security, Zero Trust, least privilege, netwerkmonitoring beveiliging, WMI service account">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/blog.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "WMI Gebruikersrechten op een Verantwoorde Manier",
+        "author": {
+            "@type": "Person",
+            "name": "Thomas"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Re-Scan Monitor Solutions",
+            "url": "https://www.re-scan.nl"
+        },
+        "datePublished": "2024-06-14",
+        "dateModified": "2024-06-14",
+        "description": "Leer hoe je WMI gebruikersrechten veilig configureert voor PRTG monitoring volgens het Zero Trust principe. Praktische stappen en best practices.",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.re-scan.nl/blog/wmi-gebruikersrechten-verantwoorde-manier.html"
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="../">
+                    <img src="../images/logo.png" alt="Re-Scan Logo" class="logo">
+                    <span class="brand-text">Re-Scan Monitor Solutions</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../#home">Home</a></li>
+                <li><a href="../#about">About</a></li>
+                <li><a href="../#features">Features</a></li>
+                <li><a href="../blog/">Blog</a></li>
+                <li><a href="../#pricing">Pricing</a></li>
+                <li><a href="mailto:contact@re-scan.nl" class="cta-button">Neem Contact Op</a></li>
+            </ul>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Header -->
+    <section class="article-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../">Home</a> / <a href="../blog/">Blog</a> / <span>WMI Gebruikersrechten</span>
+            </div>
+            <h1>WMI Gebruikersrechten op een Verantwoorde Manier</h1>
+            <div class="article-meta">
+                <span class="author">Door Thomas</span>
+                <span class="date">14 juni 2024</span>
+                <span class="category">Security & PRTG</span>
+                <span class="read-time">5 min leestijd</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <article class="article-content">
+        <div class="container">
+            <div class="article-body">
+                <div class="article-image">
+                    <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=400&fit=crop" 
+                         alt="Windows security management console" 
+                         loading="lazy">
+                </div>
+
+                <p class="lead">In de wereld van netwerken en systeembeheer speelt beveiliging een cruciale rol. Het toepassen van het Zero Trust-principe is tegenwoordig belangrijker dan ooit. Dit houdt in dat gebruikers zo min mogelijk rechten krijgen om hun taken uit te voeren, ook wel bekend als het least privilege-principe. Dit is uiteraard ook relevant bij het gebruik van netwerkmonitoringtools zoals PRTG Network Monitor.</p>
+
+                <h2>Creëer een Dedicated WMI Monitor Service Account</h2>
+                <p>Een van de eerste stappen om PRTG veilig te gebruiken, is het aanmaken van een dedicated WMI monitor service account binnen je Active Directory. Dit service account zorgt ervoor dat de rechten en toegang voor WMI op een goede veilige manier beheerd kunnen. Het is belangrijk dat dit account dus geen lokale beheerder- of domeinbeheerder-rechten krijgt, maar alleen de noodzakelijke rechten om zijn taken uit te voeren.</p>
+
+                <h2>Toekennen van de Juiste Rechten</h2>
+                <p>Onderstaande stappen kun je uitvoeren om de juiste rechten toe te kennen aan het dedicated WMI monitor service account op een specifieke computer of server:</p>
+
+                <ol>
+                    <li><strong>Open wmimgmt.msc:</strong> Dit start het Windows Management Instrumentation (WMI) management console.</li>
+                    <li><strong>Navigeren naar Beveiligingsinstellingen:</strong> Ga naar WMI Control (lokaal), klik op Eigenschappen en ga naar het tabblad Beveiliging.</li>
+                    <li><strong>Instellen van Rechten:</strong> Selecteer de "Root" namespace en klik onderaan op "Beveiliging". Geef de PRTG gebruiker het recht "Remote Enable".</li>
+                    <li><strong>Toepassen van Rechten:</strong> Zorg ervoor dat je de rechten toepast op zowel de geselecteerde namespace als alle subnamespaces. Dit zorgt ervoor dat de gebruiker de nodige toegang heeft zonder te veel privileges te krijgen.</li>
+                </ol>
+
+                <p>Naast het recht "Remote Enable" moet het dedicated account worden toegevoegd aan de volgende groepen:</p>
+
+                <ul>
+                    <li>Remote Management Users</li>
+                    <li>Distributed COM Users</li>
+                    <li>Performance Monitor Users</li>
+                </ul>
+
+                <p>Deze instellingen zorgen ervoor dat de PRTG gebruiker zijn taken kan uitvoeren zonder onnodige toegang tot andere kritieke systeemfuncties.</p>
+
+                <p>Om te testen of je instellingen correct zijn uitgevoerd kun je de gratis WMI test tool van Peassler gebruiken. Deze is hier te downloaden: <a href="https://www.paessler.com/tools/wmitester" target="_blank" rel="noopener">https://www.paessler.com/tools/wmitester</a></p>
+
+                <h2>SNMP versus WMI: Wanneer Gebruik Je Wat?</h2>
+                <p>Over het algemeen is het beter om SNMP (Simple Network Management Protocol) te gebruiken voor netwerkmonitoring, omdat het eenvoudiger en veiliger is. SNMP is een lichtgewicht protocol dat minder systeembronnen vereist en makkelijker te configureren is.</p>
+
+                <p>Echter, in sommige gevallen is het noodzakelijk om WMI (Windows Management Instrumentation) te gebruiken. Dit is vooral het geval wanneer je specifieke informatie wilt monitoren die niet beschikbaar is via SNMP, zoals bij het monitoren van een SQL Server of een Exchange Server. Met WMI kun je ook gedetailleerdere informatie verkrijgen, zoals de IOPS (Input/Output Operations Per Second) van schijven, wat essentieel kan zijn voor prestatiemonitoring.</p>
+
+                <h2>Waarom het Belangrijk is om Voorzichtig te Zijn met Rechten</h2>
+                <p>Het toekennen van te veel rechten aan gebruikers kan leiden tot ernstige beveiligingsrisico's. Als een gebruiker lokale beheerder- of domeinbeheerder-rechten heeft, krijgt deze toegang tot gevoelige systeeminstellingen en gegevens. Dit kan een aantrekkelijk doelwit zijn voor kwaadwillenden, vooral in tijden waarin cyberaanvallen steeds geavanceerder worden.</p>
+
+                <h2>Conclusie</h2>
+                <p>Door zorgvuldig om te gaan met gebruikersrechten binnen PRTG, kun je je netwerkmonitoring veiliger en efficiënter maken. Het toepassen van het least privilege-principe beschermt je systemen tegen potentiële bedreigingen en zorgt ervoor dat gebruikers alleen toegang hebben tot wat ze echt nodig hebben. In de huidige tijd van Zero Trust is dit geen luxe, maar een noodzaak.</p>
+
+                <p>Blijf je systemen veilig houden en wees altijd waakzaam met het toekennen van rechten. Door het juiste gebruik van SNMP en WMI, afhankelijk van de specifieke behoeften van je netwerk, kun je een optimale balans vinden tussen functionaliteit en beveiliging.</p>
+
+                <p>Mocht je nog vragen hebben over dit onderwerp of over andere monitor gerelateerde zaken dan kun je uiteraard altijd contact met ons opnemen.</p>
+
+                <div class="article-cta">
+                    <h3>Hulp nodig bij WMI configuratie?</h3>
+                    <p>Neem contact op voor ondersteuning bij het veilig configureren van WMI rechten voor je PRTG monitoring omgeving.</p>
+                    <a href="mailto:contact@re-scan.nl?subject=WMI configuratie ondersteuning&body=Hallo,%0D%0A%0D%0AIk ben geïnteresseerd in ondersteuning bij WMI configuratie voor PRTG.%0D%0A%0D%0AOrganisatie:%0D%0AHuidige PRTG setup:%0D%0AContactpersoon:%0D%0ATelefoon:%0D%0A%0D%0AVragen:" class="btn btn-primary">
+                        Neem contact op voor WMI ondersteuning
+                    </a>
+                </div>
+            </div>
+
+            <!-- Article sidebar -->
+            <aside class="article-sidebar">
+                <div class="sidebar-box">
+                    <h3>Over de Auteur</h3>
+                    <p><strong>Thomas</strong> heeft uitgebreide ervaring met PRTG implementaties en Windows security best practices. Hij helpt organisaties bij het veilig configureren van monitoring oplossingen volgens Zero Trust principes.</p>
+                </div>
+
+                <div class="sidebar-box">
+                    <h3>Gerelateerde Artikelen</h3>
+                    <ul>
+                        <li><a href="normenkader-ibp-monitor-omgeving.html">Hoe het vernieuwde Normenkader IBP te integreren</a></li>
+                        <li><a href="prtg-best-practices.html">PRTG Best Practices voor Nederlandse bedrijven</a></li>
+                        <li><a href="scholen-informatiebeveiliging-privacy.html">Hoe Re-Scan scholen helpt met informatiebeveiliging</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-box">
+                    <h3>PRTG Security Tools</h3>
+                    <p>Download handige tools voor het testen en configureren van WMI connecties.</p>
+                    <a href="https://www.paessler.com/tools/wmitester" target="_blank" rel="noopener" class="btn btn-outline btn-small">WMI Tester Tool</a>
+                </div>
+
+                <div class="sidebar-box">
+                    <h3>Zero Trust Implementatie</h3>
+                    <p>Ontdek hoe je Zero Trust principes toepast in je monitoring omgeving.</p>
+                    <a href="mailto:contact@re-scan.nl?subject=Zero Trust monitoring" class="btn btn-outline btn-small">Meer info</a>
+                </div>
+            </aside>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="../images/logo.png" alt="Re-Scan Logo" class="logo">
+                    <span class="brand-text">Re-Scan Monitor Solutions</span>
+                </div>
+                <p>Copyright &copy; 2025 Re-Scan Monitor Solutions - KvK: 94485976</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

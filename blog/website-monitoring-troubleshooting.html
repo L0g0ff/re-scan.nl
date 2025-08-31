@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Monitoring en Troubleshooting met PRTG - Re-Scan Monitor Solutions</title>
+    <meta name="description" content="Leer hoe je effectief websites monitort met PRTG HTTP Advanced sensoren. Ontdek problemen voordat klanten ze merken en los storingen snel op.">
+    <meta name="author" content="Thomas">
+    <meta name="keywords" content="website monitoring, PRTG, HTTP Advanced sensor, website troubleshooting, uptime monitoring, webservice monitoring">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/blog.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Website Monitoring en Troubleshooting met PRTG",
+        "author": {
+            "@type": "Person",
+            "name": "Thomas"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Re-Scan Monitor Solutions",
+            "url": "https://www.re-scan.nl"
+        },
+        "datePublished": "2024-07-05",
+        "dateModified": "2024-08-31",
+        "description": "Leer hoe je effectief websites monitort met PRTG HTTP Advanced sensoren. Ontdek problemen voordat klanten ze merken en los storingen snel op.",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.re-scan.nl/blog/website-monitoring-troubleshooting.html"
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="../">
+                    <img src="../images/logo.png" alt="Re-Scan Logo" class="logo">
+                    <span class="brand-text">Re-Scan Monitor Solutions</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../#home">Home</a></li>
+                <li><a href="../#about">About</a></li>
+                <li><a href="../#features">Features</a></li>
+                <li><a href="../blog/">Blog</a></li>
+                <li><a href="../#pricing">Pricing</a></li>
+                <li><a href="mailto:contact@re-scan.nl" class="cta-button">Neem Contact Op</a></li>
+            </ul>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Header -->
+    <section class="article-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../">Home</a> / <a href="../blog/">Blog</a> / <span>Website Monitoring en Troubleshooting</span>
+            </div>
+            <h1>Website Monitoring en Troubleshooting met PRTG</h1>
+            <div class="article-meta">
+                <span class="author">Door Thomas</span>
+                <span class="date">5 juli 2024</span>
+                <span class="category">Website Monitoring</span>
+                <span class="read-time">6 min leestijd</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <article class="article-content">
+        <div class="container">
+            <div class="article-body">
+                <div class="article-image">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop" 
+                         alt="Website monitoring dashboard met grafieken" 
+                         loading="lazy">
+                </div>
+
+                <p class="lead">Door gebruik te maken van een "HTTP Advanced" sensor in PRTG, kun je effectief een website monitoren. Deze sensor controleert niet alleen de beschikbaarheid van de site, maar ook of de verwachte content daadwerkelijk wordt teruggegeven.</p>
+
+                <h2>Configuratie van de HTTP Advanced Sensor</h2>
+                <p>Volg hiervoor deze stappen:</p>
+
+                <ol>
+                    <li>Maak een HTTP Advanced Sensor aan.</li>
+                    <li>Stel de sensor zo in dat deze de response controleert door te zoeken naar een specifiek woord op de opgehaalde pagina. In dit geval het woord "Features"</li>
+                    <li>Zie onderstaande twee screenshots voor meer details.</li>
+                </ol>
+
+                <div class="article-image">
+                    <img src="../images/blog/image-1024x310.png" 
+                         alt="PRTG HTTP Advanced sensor configuratie stap 1" 
+                         loading="lazy">
+                </div>
+
+                <div class="article-image">
+                    <img src="../images/blog/image-1-1024x384.png" 
+                         alt="PRTG HTTP Advanced sensor configuratie stap 2" 
+                         loading="lazy">
+                </div>
+
+                <p>De status van de website wordt vervolgens automatisch elke 5 minuten gecontroleerd.</p>
+
+                <h2>Proactieve Probleemidentificatie</h2>
+                <p>Door een website actief te monitoren, kun je potentiële knelpunten identificeren. Zie bijvoorbeeld onderstaande grafiek.</p>
+
+                <div class="article-image">
+                    <img src="../images/blog/image-3-1024x519.png" 
+                         alt="Website monitoring grafiek met downtime patronen" 
+                         loading="lazy">
+                </div>
+
+                <p>Zoals je hier kunt zien, gaat de website elke avond rond dezelfde tijd voor langere periodes offline. Zonder monitoring zou je dit waarschijnlijk pas veel later hebben ontdekt. Klanten zullen je niet informeren wanneer een website niet werkt; in plaats daarvan zoeken ze gewoon naar een alternatief.</p>
+
+                <h2>Troubleshooting met PRTG Logs</h2>
+                <p>In de PRTG-log kun je de oorzaak achterhalen waarom de pagina offline is gegaan. In dit voorbeeld betreft het een interne 500-fout.</p>
+
+                <div class="article-image">
+                    <img src="../images/blog/image-4-1024x253.png" 
+                         alt="PRTG log met interne 500-fout" 
+                         loading="lazy">
+                </div>
+
+                <p>Om de oorzaak van de interne 500-fout te achterhalen, moet je de logbestanden van je webapplicatie nakijken. Dit verschilt per oplossing. In dit geval zal ik de logging moeten downloaden van de webserver waarop de website draait.</p>
+
+                <h3>Case Study: WordPress Backup Plugin</h3>
+                <p>Zoals je hieronder kunt zien, blijkt de oorzaak een cronjob te zijn. De tijden van deze cronjob komen exact overeen met de tijden die door PRTG zijn geregistreerd.</p>
+
+                <p>Begin (01.12):</p>
+
+                <div class="article-image">
+                    <img src="../images/blog/image-8-1024x54.png" 
+                         alt="Webserver log begin cronjob 01:12" 
+                         loading="lazy">
+                </div>
+
+                <p>En het einde (03.42)</p>
+
+                <div class="article-image">
+                    <img src="../images/blog/image-11-1024x50.png" 
+                         alt="Webserver log einde cronjob 03:42" 
+                         loading="lazy">
+                </div>
+
+                <p>In dit geval bleek de oorzaak een WordPress-backupplugin te zijn. Het uitschakelen van de plugin en overstappen naar een betere back-upoplossing was de oplossing.</p>
+
+                <h2>Conclusie</h2>
+                <p>Door gebruik te maken van een HTTP Advanced Sensor in PRTG, kun je effectief de status en prestaties van je website monitoren. Dit stelt je in staat om snel knelpunten te identificeren en problemen, zoals interne 500-fouten veroorzaakt door cronjobs of verouderde plugins, op te lossen. Regelmatige monitoring zorgt ervoor dat je proactief kunt reageren op issues, wat de betrouwbaarheid en gebruiksvriendelijkheid van je website aanzienlijk verbetert.</p>
+
+                <p>Als je hulp nodig hebt bij het opzetten of optimaliseren van je website monitoring, neem dan gerust contact met ons op. Wij staan klaar om je te ondersteunen.</p>
+
+                <div class="article-cta">
+                    <h3>Hulp nodig bij website monitoring?</h3>
+                    <p>Neem contact op voor ondersteuning bij het opzetten of optimaliseren van je website monitoring met PRTG.</p>
+                    <a href="mailto:contact@re-scan.nl?subject=Website monitoring ondersteuning&body=Hallo,%0D%0A%0D%0AIk ben geïnteresseerd in ondersteuning bij website monitoring met PRTG.%0D%0A%0D%0AWebsite(s) om te monitoren:%0D%0AHuidige monitoring setup:%0D%0AOrganisatie:%0D%0AContactpersoon:%0D%0ATelefoon:%0D%0A%0D%0AVragen:" class="btn btn-primary">
+                        Neem contact op voor website monitoring
+                    </a>
+                </div>
+            </div>
+
+            <!-- Article sidebar -->
+            <aside class="article-sidebar">
+                <div class="sidebar-box">
+                    <h3>Over de Auteur</h3>
+                    <p><strong>Thomas</strong> heeft uitgebreide ervaring met website monitoring en PRTG implementaties. Hij helpt organisaties bij het opzetten van betrouwbare monitoring oplossingen voor kritieke web services.</p>
+                </div>
+
+                <div class="sidebar-box">
+                    <h3>Gerelateerde Artikelen</h3>
+                    <ul>
+                        <li><a href="wmi-gebruikersrechten-verantwoorde-manier.html">WMI Gebruikersrechten op een Verantwoorde Manier</a></li>
+                        <li><a href="normenkader-ibp-monitor-omgeving.html">Hoe het vernieuwde Normenkader IBP te integreren</a></li>
+                        <li><a href="waarom-stoppen-mail-alerts.html">Waarom stoppen met mail alerts?</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-box">
+                    <h3>Website Monitoring Checklist</h3>
+                    <ul>
+                        <li>✓ HTTP Advanced sensor configureren</li>
+                        <li>✓ Content verificatie instellen</li>
+                        <li>✓ Response tijd thresholds bepalen</li>
+                        <li>✓ Alert escalatie configureren</li>
+                        <li>✓ SSL certificaat monitoring</li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-box">
+                    <h3>PRTG Monitoring Tools</h3>
+                    <p>Ontdek welke sensoren het beste bij jouw monitoring behoeften passen.</p>
+                    <a href="mailto:contact@re-scan.nl?subject=PRTG sensor advies" class="btn btn-outline btn-small">Sensor advies</a>
+                </div>
+            </aside>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="../images/logo.png" alt="Re-Scan Logo" class="logo">
+                    <span class="brand-text">Re-Scan Monitor Solutions</span>
+                </div>
+                <p>Copyright &copy; 2025 Re-Scan Monitor Solutions - KvK: 94485976</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

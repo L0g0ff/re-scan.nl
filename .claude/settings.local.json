@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:www.re-scan.nl)"
+      "WebFetch(domain:www.re-scan.nl)",
+      "Bash(wget:*)"
     ],
     "deny": [],
     "ask": []

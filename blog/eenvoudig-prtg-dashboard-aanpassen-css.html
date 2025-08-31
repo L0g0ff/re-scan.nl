@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eenvoudig PRTG Dashboard Aanpassen met CSS - Re-Scan Monitor Solutions</title>
+    <meta name="description" content="Leer hoe je je PRTG dashboard eenvoudig aanpast met CSS om acknowledged meldingen te filteren. Een simpele truc voor een overzichtelijker monitoring interface.">
+    <meta name="author" content="Thomas">
+    <meta name="keywords" content="PRTG dashboard, CSS aanpassingen, PRTG customization, acknowledged meldingen, PRTG interface, dashboard filtering">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/blog.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Eenvoudig PRTG Dashboard Aanpassen met CSS",
+        "author": {
+            "@type": "Person",
+            "name": "Thomas"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Re-Scan Monitor Solutions",
+            "url": "https://www.re-scan.nl"
+        },
+        "datePublished": "2024-08-15",
+        "dateModified": "2024-08-31",
+        "description": "Leer hoe je je PRTG dashboard eenvoudig aanpast met CSS om acknowledged meldingen te filteren. Een simpele truc voor een overzichtelijker monitoring interface.",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.re-scan.nl/blog/eenvoudig-prtg-dashboard-aanpassen-css.html"
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="../">
+                    <img src="../images/logo.png" alt="Re-Scan Logo" class="logo">
+                    <span class="brand-text">Re-Scan Monitor Solutions</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../#home">Home</a></li>
+                <li><a href="../#about">About</a></li>
+                <li><a href="../#features">Features</a></li>
+                <li><a href="../blog/">Blog</a></li>
+                <li><a href="../#pricing">Pricing</a></li>
+                <li><a href="mailto:contact@re-scan.nl" class="cta-button">Neem Contact Op</a></li>
+            </ul>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Header -->
+    <section class="article-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../">Home</a> / <a href="../blog/">Blog</a> / <span>PRTG Dashboard Aanpassen met CSS</span>
+            </div>
+            <h1>Eenvoudig PRTG Dashboard Aanpassen met CSS</h1>
+            <div class="article-meta">
+                <span class="author">Door Thomas</span>
+                <span class="date">15 augustus 2024</span>
+                <span class="category">PRTG Tips</span>
+                <span class="read-time">4 min leestijd</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <article class="article-content">
+        <div class="container">
+            <div class="article-body">
+                <div class="article-image">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop" 
+                         alt="PRTG dashboard interface customization" 
+                         loading="lazy">
+                </div>
+
+                <p class="lead">In de wereld van netwerk monitoring is PRTG een krachtige tool die veel IT professionals dagelijks gebruiken. Maar soms wil je de weergave net even anders hebben dan de standaard interface biedt. In deze blogpost deel ik een simpele maar effectieve truc om je PRTG dashboard aan te passen aan jouw wensen, specifiek gericht op het filteren van meldingen.</p>
+
+                <h2>Het Probleem</h2>
+                <p>Een veel voorkomende situatie: je PRTG dashboard toont zowel 'Down' als 'Down (Acknowledged)' meldingen. Terwijl de acknowledged meldingen al onder controle zijn, leiden ze af van de acute problemen die nog aandacht nodig hebben. Hoe filter je deze acknowledged meldingen weg zonder de basis functionaliteit van PRTG aan te tasten?</p>
+
+                <h2>De Oplossing: CSS Magie</h2>
+                <p>De oplossing blijkt verrassend eenvoudig. Met slechts drie regels CSS kunnen we precies bereiken wat we willen. Hier is hoe:</p>
+
+                <ol>
+                    <li>Open je PRTG map settings</li>
+                    <li>Zoek naar het "HTML Before" veld</li>
+                    <li>Voeg deze code toe:</li>
+                </ol>
+
+                <div class="code-block">
+                    <pre><code>&lt;style&gt;
+tr.sr.sa {
+    display: none !important;
+}
+&lt;/style&gt;</code></pre>
+                </div>
+
+                <p>Dat is alles! Maar wat doet deze code precies?</p>
+
+                <h2>Hoe Werkt Het?</h2>
+                <p>Laten we de code ontleden:</p>
+
+                <ul>
+                    <li><strong>tr:</strong> selecteert tabel rijen</li>
+                    <li><strong>.sr:</strong> staat voor "sensor row", selecteert alle sensor rijen</li>
+                    <li><strong>.sa:</strong> staat voor "sensor acknowledged", selecteert acknowledged sensoren</li>
+                    <li><strong>display: none:</strong> verbergt de geselecteerde elementen</li>
+                    <li><strong>!important:</strong> zorgt dat onze regel prioriteit krijgt</li>
+                </ul>
+
+                <p>Door deze CSS selector te gebruiken, vertellen we de browser: "Verberg alle tabel rijen die zowel een sensor row (.sr) als acknowledged (.sa) zijn."</p>
+
+                <h2>Voordelen van Deze Aanpak</h2>
+                <p>Deze oplossing heeft verschillende voordelen:</p>
+
+                <ul>
+                    <li><strong>Lichtgewicht:</strong> Geen JavaScript nodig, puur CSS</li>
+                    <li><strong>Performant:</strong> Heeft minimale impact op de laadtijd</li>
+                    <li><strong>Niet-invasief:</strong> Beïnvloedt alleen de weergave, niet de functionaliteit</li>
+                    <li><strong>Persistent:</strong> Blijft werken na pagina verversing</li>
+                    <li><strong>Reversible:</strong> Makkelijk terug te draaien indien nodig</li>
+                    <li><strong>Files:</strong> Geen upload nodig dus ideaal voor PRTG hosted oplossingen</li>
+                </ul>
+
+                <h2>Tips voor Verdere Aanpassingen</h2>
+                <p>Je kunt deze techniek uitbreiden voor andere aanpassingen:</p>
+
+                <ul>
+                    <li>Filter andere status types door andere klassen te targeten</li>
+                    <li>Pas kleuren aan met background-color</li>
+                    <li>Highlight specifieke sensoren met border of box-shadow</li>
+                </ul>
+
+                <div class="info-box">
+                    <h3>💡 Pro Tip</h3>
+                    <p>Wil je experimenteren met andere CSS aanpassingen? Gebruik de browser developer tools (F12) om PRTG's HTML structuur te inspecteren en andere klassen te ontdekken die je kunt targeten.</p>
+                </div>
+
+                <h2>Conclusie</h2>
+                <p>Soms zijn de meest effectieve oplossingen verrassend eenvoudig. Met basis kennis van HTML/CSS kun je PRTG aanpassen aan jouw specifieke wensen zonder de core functionaliteit aan te tasten. Deze CSS-based aanpak voor het filteren van acknowledged meldingen is daar een perfect voorbeeld van.</p>
+
+                <p>Mocht je nog vragen hebben over dit onderwerp of over andere monitor gerelateerde zaken dan kun je uiteraard altijd contact met ons opnemen.</p>
+
+                <div class="article-cta">
+                    <h3>Hulp nodig bij PRTG aanpassingen?</h3>
+                    <p>Neem contact op voor ondersteuning bij het customizen van je PRTG interface en dashboards.</p>
+                    <a href="mailto:contact@re-scan.nl?subject=PRTG dashboard customization&body=Hallo,%0D%0A%0D%0AIk ben geïnteresseerd in ondersteuning bij PRTG dashboard aanpassingen.%0D%0A%0D%0AHuidige PRTG setup:%0D%0AGewenste aanpassingen:%0D%0AOrganisatie:%0D%0AContactpersoon:%0D%0ATelefoon:%0D%0A%0D%0AVragen:" class="btn btn-primary">
+                        Neem contact op voor PRTG customization
+                    </a>
+                </div>
+            </div>
+
+            <!-- Article sidebar -->
+            <aside class="article-sidebar">
+                <div class="sidebar-box">
+                    <h3>Over de Auteur</h3>
+                    <p><strong>Thomas</strong> heeft uitgebreide ervaring met PRTG implementaties en interface customization. Hij helpt organisaties bij het optimaliseren van hun monitoring dashboards voor maximale efficiëntie.</p>
+                </div>
+
+                <div class="sidebar-box">
+                    <h3>Gerelateerde Artikelen</h3>
+                    <ul>
+                        <li><a href="website-monitoring-troubleshooting.html">Website Monitoring en Troubleshooting met PRTG</a></li>
+                        <li><a href="wmi-gebruikersrechten-verantwoorde-manier.html">WMI Gebruikersrechten op een Verantwoorde Manier</a></li>
+                        <li><a href="normenkader-ibp-monitor-omgeving.html">Hoe het vernieuwde Normenkader IBP te integreren</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-box">
+                    <h3>CSS Customization Tips</h3>
+                    <ul>
+                        <li>✓ Gebruik browser developer tools</li>
+                        <li>✓ Test aanpassingen eerst lokaal</li>
+                        <li>✓ Bewaar een backup van je CSS</li>
+                        <li>✓ Documenteer je wijzigingen</li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-box">
+                    <h3>PRTG Resources</h3>
+                    <p>Ontdek meer PRTG tips en tricks voor een optimale monitoring setup.</p>
+                    <a href="mailto:contact@re-scan.nl?subject=PRTG tips" class="btn btn-outline btn-small">Meer PRTG tips</a>
+                </div>
+            </aside>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="../images/logo.png" alt="Re-Scan Logo" class="logo">
+                    <span class="brand-text">Re-Scan Monitor Solutions</span>
+                </div>
+                <p>Copyright &copy; 2025 Re-Scan Monitor Solutions - KvK: 94485976</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
