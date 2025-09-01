@@ -843,6 +843,112 @@ h3 {
     }
 }
 
+/* Portfolio & Expertise Section */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    align-items: stretch;
+}
+
+.portfolio-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 2px solid transparent;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-green);
+}
+
+.portfolio-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.portfolio-icon {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-green), var(--dark-green));
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.portfolio-info h3 {
+    color: var(--navy);
+    margin: 0 0 0.25rem 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.portfolio-url {
+    color: var(--medium-gray);
+    font-size: 0.875rem;
+    font-family: monospace;
+    background: var(--light-gray);
+    padding: 0.125rem 0.5rem;
+    border-radius: 4px;
+}
+
+.portfolio-card p {
+    color: var(--dark-gray);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.portfolio-link {
+    color: var(--primary-green);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid var(--primary-green);
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s ease;
+    margin-top: auto;
+}
+
+.portfolio-link:hover {
+    background: var(--primary-green);
+    color: white;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .portfolio-card {
+        padding: 1.5rem;
+    }
+    
+    .portfolio-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.75rem;
+    }
+    
+    .portfolio-info h3 {
+        font-size: 1.125rem;
+    }
+}
+
 /* Icon Styles */
 .icon {
     display: inline-block;
