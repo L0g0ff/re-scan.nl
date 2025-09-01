@@ -24,12 +24,6 @@
         <priority>0.7</priority>
     </url>
     
-    <url>
-        <loc>https://www.re-scan.nl/blog/prtg-best-practices.html</loc>
-        <lastmod>2024-12-08</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
     
     <url>
         <loc>https://www.re-scan.nl/blog/wmi-gebruikersrechten-verantwoorde-manier.html</loc>
@@ -52,10 +46,4 @@
         <priority>0.7</priority>
     </url>
     
-    <url>
-        <loc>https://www.re-scan.nl/blog/proactief-vs-reactief.html</loc>
-        <lastmod>2024-12-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
 </urlset>

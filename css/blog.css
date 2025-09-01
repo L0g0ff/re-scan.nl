@@ -229,19 +229,41 @@
 
 /* Blog Index Styles */
 .blog-hero {
-    background: var(--light-gray);
+    background: linear-gradient(135deg, var(--navy) 0%, var(--dark-green) 100%);
+    color: white;
     padding: 6rem 0 4rem;
     margin-top: 80px;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.blog-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(84, 180, 53, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(84, 180, 53, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.blog-hero .container {
+    position: relative;
+    z-index: 1;
 }
 
 .blog-hero h1 {
-    color: var(--navy);
+    color: white;
     margin-bottom: 1rem;
 }
 
 .blog-hero p {
-    color: var(--medium-gray);
+    color: rgba(255, 255, 255, 0.9);
     font-size: 1.125rem;
 }
 
