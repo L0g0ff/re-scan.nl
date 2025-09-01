@@ -701,6 +701,148 @@ h3 {
     color: var(--primary-green);
 }
 
+/* Ons Verhaal Section */
+.story-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.story-section {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.story-lead {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--navy);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    align-items: stretch;
+}
+
+.story-card {
+    background: white;
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.story-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.story-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.story-icon {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-green), var(--dark-green));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.story-card h3 {
+    color: var(--navy);
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.story-card p {
+    color: var(--dark-gray);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.story-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.story-benefit {
+    padding: 1.5rem;
+    background: var(--light-gray);
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-green);
+}
+
+.story-benefit h4 {
+    color: var(--navy);
+    margin-bottom: 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.story-benefit p {
+    color: var(--dark-gray);
+    line-height: 1.5;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.story-cta {
+    margin-top: auto;
+    padding-top: 1.5rem;
+    border-top: 2px solid var(--light-gray);
+    text-align: center;
+}
+
+.story-cta p {
+    color: var(--navy);
+    margin-bottom: 1rem;
+}
+
+.story-cta .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .story-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .story-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .story-card-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .story-benefits {
+        gap: 1rem;
+    }
+    
+    .story-benefit {
+        padding: 1rem;
+    }
+}
+
 /* Icon Styles */
 .icon {
     display: inline-block;
