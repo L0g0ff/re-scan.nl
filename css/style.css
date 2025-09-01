@@ -422,7 +422,7 @@ h3 {
 }
 
 .faq-item.active .faq-answer {
-    max-height: 200px;
+    max-height: 500px;
     padding: 1.5rem;
 }
 
