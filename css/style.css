@@ -415,14 +415,22 @@ h3 {
 }
 
 .faq-answer {
-    padding: 0 1.5rem;
-    max-height: 0;
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s ease;
     overflow: hidden;
-    transition: max-height 0.3s ease, padding 0.3s ease;
 }
 
 .faq-item.active .faq-answer {
-    max-height: 500px;
+    grid-template-rows: 1fr;
+}
+
+.faq-answer > div {
+    overflow: hidden;
+    padding: 0 1.5rem;
+}
+
+.faq-item.active .faq-answer > div {
     padding: 1.5rem;
 }
 
