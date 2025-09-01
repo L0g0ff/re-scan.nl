@@ -589,13 +589,21 @@ h3 {
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    gap: 2rem;
     align-items: start;
+}
+
+.contact-info {
+    text-align: right;
 }
 
 .contact-info h3 {
     margin-bottom: 2rem;
     color: var(--primary-green);
+}
+
+.contact-form {
+    text-align: left;
 }
 
 .contact-item {
@@ -777,7 +785,7 @@ h3 {
     
     .contact-grid {
         grid-template-columns: 1fr;
-        gap: 3rem;
+        gap: 2rem;
     }
 }
 
