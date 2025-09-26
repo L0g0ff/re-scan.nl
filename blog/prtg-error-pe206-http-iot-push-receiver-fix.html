@@ -53,7 +53,7 @@
                 <li><a href="../#home">Home</a></li>
                 <li><a href="../#about">About</a></li>
                 <li><a href="../#features">Features</a></li>
-                <li><a href="../blog/" class="active">Blog</a></li>
+                <li><a href="../blog/">Blog</a></li>
                 <li><a href="../#pricing">Pricing</a></li>
                 <li><a href="mailto:contact@re-scan.nl" class="cta-button">Neem Contact Op</a></li>
             </ul>
@@ -89,26 +89,27 @@
                     <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=400&fit=crop"
                          alt="PRTG monitoring error troubleshooting" loading="lazy">
                 </div>
-                    <p class="lead">Krijg je deze error bij het opzetten van een HTTP IoT Push Data Advanced sensor in PRTG?</p>
 
-                    <pre><code>PRTG could not start the HTTP push receiver.
+                <p class="lead">Krijg je deze error bij het opzetten van een HTTP IoT Push Data Advanced sensor in PRTG?</p>
+
+                <pre><code>PRTG could not start the HTTP push receiver.
 error:80000002:system library::No such file or directory (code: PE206)</code></pre>
 
-                    <p>Hier is de <strong>snelle oplossing</strong> voor hosted PRTG instances met remote probes.</p>
+                <p>Hier is de <strong>snelle oplossing</strong> voor hosted PRTG instances met remote probes.</p>
 
-                    <h2>Wat is Error PE206?</h2>
+                <h2>Wat is Error PE206?</h2>
 
-                    <p>PE206 betekent dat PRTG de <strong>SSL certificaten niet kan vinden</strong> in de <code>\cert</code> directory van je remote probe. Bij hosted instances kun je deze niet kopiëren van de core server.</p>
+                <p>PE206 betekent dat PRTG de <strong>SSL certificaten niet kan vinden</strong> in de <code>\cert</code> directory van je remote probe. Bij hosted instances kun je deze niet kopiëren van de core server.</p>
 
-                    <h2>Oplossing: Genereer Eigen Certificaten</h2>
+                <h2>Oplossing: Genereer Eigen Certificaten</h2>
 
-                    <p>PRTG documentatie zegt: <em>"this certificate does not have to match the certificate that you use on the PRTG core server"</em> - dus we maken gewoon onze eigen certificaten!</p>
+                <p>PRTG documentatie zegt: <em>"this certificate does not have to match the certificate that you use on the PRTG core server"</em> - dus we maken gewoon onze eigen certificaten!</p>
 
-                    <p><strong>Tip:</strong> Heb je een interne Certificate Authority (CA) in je Windows domein? Dan kun je beter een certificaat aanvragen via de CA in plaats van een self-signed certificaat te maken. Dit voorkomt browser waarschuwingen en geeft betere beveiliging.</p>
+                <p><strong>Tip:</strong> Heb je een interne Certificate Authority (CA) in je Windows domein? Dan kun je beter een certificaat aanvragen via de CA in plaats van een self-signed certificaat te maken. Dit voorkomt browser waarschuwingen en geeft betere beveiliging.</p>
 
-                    <h3>Stap 1: Certificaten Maken</h3>
+                <h3>Stap 1: Certificaten Maken</h3>
 
-                    <pre><code># Maak werkdirectory
+                <pre><code># Maak werkdirectory
 mkdir prtg-certs && cd prtg-certs
 
 # Private key genereren
@@ -121,40 +122,40 @@ openssl req -new -x509 -key prtg.key -out prtg.crt -days 365 \
 # Root certificaat maken
 cp prtg.crt root.pem</code></pre>
 
-                    <h3>Stap 2: Installeren op Remote Probe</h3>
+                <h3>Stap 2: Installeren op Remote Probe</h3>
 
-                    <ol>
-                        <li><strong>Stop PRTG Remote Probe Service</strong> (via PRTG Administration Tool)</li>
-                        <li><strong>Kopieer bestanden naar:</strong>
-                            <pre><code>C:\Program Files (x86)\PRTG Network Monitor\cert\prtg.crt
+                <ol>
+                    <li><strong>Stop PRTG Remote Probe Service</strong> (via PRTG Administration Tool)</li>
+                    <li><strong>Kopieer bestanden naar:</strong>
+                        <pre><code>C:\Program Files (x86)\PRTG Network Monitor\cert\prtg.crt
 C:\Program Files (x86)\PRTG Network Monitor\cert\prtg.key
 C:\Program Files (x86)\PRTG Network Monitor\cert\root.pem</code></pre>
-                        </li>
-                        <li><strong>Start service opnieuw</strong></li>
-                    </ol>
+                    </li>
+                    <li><strong>Start service opnieuw</strong></li>
+                </ol>
 
-                    <h3>Stap 3: Testen</h3>
+                <h3>Stap 3: Testen</h3>
 
-                    <p>HTTP IoT Push Data Advanced sensor toevoegen - PE206 error zou verdwenen moeten zijn!</p>
+                <p>HTTP IoT Push Data Advanced sensor toevoegen - PE206 error zou verdwenen moeten zijn!</p>
 
-                    <p>Controleer of de TCP poort actief is op de probe server:</p>
+                <p>Controleer of de TCP poort actief is op de probe server:</p>
 
-                    <pre><code>netstat -an | findstr 5051</code></pre>
+                <pre><code>netstat -an | findstr 5051</code></pre>
 
-                    <p>Je zou een regel moeten zien zoals: <code>TCP 0.0.0.0:5051 0.0.0.0:0 LISTENING</code></p>
+                <p>Je zou een regel moeten zien zoals: <code>TCP 0.0.0.0:5051 0.0.0.0:0 LISTENING</code></p>
 
-                    <p>Test daarna met: <code>https://&lt;probe-ip&gt;:5051/&lt;token&gt;?content=&lt;XML_data&gt;</code></p>
+                <p>Test daarna met: <code>https://&lt;probe-ip&gt;:5051/&lt;token&gt;?content=&lt;XML_data&gt;</code></p>
 
-                    <h2>Samenvatting</h2>
+                <h2>Samenvatting</h2>
 
-                    <ul>
-                        <li><strong>Probleem:</strong> PE206 = ontbrekende SSL certificaten</li>
-                        <li><strong>Oplossing:</strong> Eigen certificaten genereren met OpenSSL</li>
-                        <li><strong>Tijd:</strong> 5 minuten</li>
-                        <li><strong>Resultaat:</strong> Werkende IoT HTTP listener op poort 5051</li>
-                    </ul>
+                <ul>
+                    <li><strong>Probleem:</strong> PE206 = ontbrekende SSL certificaten</li>
+                    <li><strong>Oplossing:</strong> Eigen certificaten genereren met OpenSSL</li>
+                    <li><strong>Tijd:</strong> 5 minuten</li>
+                    <li><strong>Resultaat:</strong> Werkende IoT HTTP listener op poort 5051</li>
+                </ul>
 
-                    <p>Error opgelost!</p>
+                <p>Error opgelost!</p>
 
                 <div class="article-cta">
                     <h3>Hulp nodig bij PRTG configuratie?</h3>
@@ -180,25 +181,26 @@ C:\Program Files (x86)\PRTG Network Monitor\cert\root.pem</code></pre>
                         <li><a href="monitoring-alerting-optimaliseren-spam-nuttige-notificaties.html">Alert Optimalisatie Gids</a></li>
                     </ul>
                 </div>
+
+                <div class="sidebar-box">
+                    <h3>PRTG Expertise</h3>
+                    <ul>
+                        <li>Remote Probe Configuratie</li>
+                        <li>SSL Certificaat Troubleshooting</li>
+                        <li>Custom Sensor Development</li>
+                        <li>Enterprise Monitoring Setup</li>
+                        <li>Performance Optimization</li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-box">
+                    <h3>Hulp Nodig?</h3>
+                    <p>Kom je er niet uit met jouw PRTG configuratie? Re-Scan Monitor Solutions helpt met complexe monitoring uitdagingen.</p>
+                    <a href="mailto:contact@re-scan.nl?subject=PRTG Hulp - PE206 Error" class="btn btn-outline btn-small">Vraag Advies</a>
+                </div>
             </aside>
         </div>
     </article>
-
-    <!-- Newsletter Signup -->
-    <section class="section section-dark">
-        <div class="container">
-            <div class="section-header">
-                <h2>Meer PRTG Tips & Tricks</h2>
-                <p>Ontvang de nieuwste monitoring tips en troubleshooting gidsen direct in je inbox</p>
-            </div>
-            <div style="text-align: center;">
-                <a href="mailto:contact@re-scan.nl?subject=Nieuwsbrief aanmelding&body=Hallo,%0D%0A%0D%0AIk wil graag op de hoogte blijven van nieuwe blog artikelen en monitoring tips.%0D%0A%0D%0ANaam:%0D%0ABedrijf:%0D%0AEmail:"
-                   class="btn btn-primary">
-                    <span class="icon-email"></span>Nieuwsbrief Aanmelden
-                </a>
-            </div>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer class="footer">
