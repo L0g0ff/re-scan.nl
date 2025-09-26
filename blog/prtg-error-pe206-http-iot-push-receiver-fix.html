@@ -104,6 +104,8 @@ error:80000002:system library::No such file or directory (code: PE206)</code></p
 
                     <p>PRTG documentatie zegt: <em>"this certificate does not have to match the certificate that you use on the PRTG core server"</em> - dus we maken gewoon onze eigen certificaten!</p>
 
+                    <p><strong>Tip:</strong> Heb je een interne Certificate Authority (CA) in je Windows domein? Dan kun je beter een certificaat aanvragen via de CA in plaats van een self-signed certificaat te maken. Dit voorkomt browser waarschuwingen en geeft betere beveiliging.</p>
+
                     <h3>Stap 1: Certificaten Maken</h3>
 
                     <pre><code># Maak werkdirectory
