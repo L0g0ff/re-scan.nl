@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Re-Scan Monitor Solutions - Empowering Business with Precision</title>
+    <meta name="description" content="Professional network monitoring solutions using PRTG. Real-time monitoring, security enhancement, and scalable infrastructure for businesses.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="brand-text">Re-Scan Monitor Solutions</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#ons-verhaal">Ons Verhaal</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="mailto:contact@re-scan.nl" class="cta-button">Neem Contact Op</a></li>
+            </ul>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Empowering Business with Precision</h1>
+                <p class="hero-subtitle">Professional network monitoring solutions met PRTG voor real-time performance tracking en security enhancement</p>
+                <div class="hero-buttons">
+                    <a href="mailto:contact@re-scan.nl" class="btn btn-primary">Neem Contact Op</a>
+                    <a href="#features" class="btn btn-secondary">Ontdek Onze Features</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Over Re-Scan Monitor Solutions</h2>
+                <p>Wij bieden gepersonaliseerde monitoring oplossingen voor uw IT infrastructuur</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-item">
+                    <div class="about-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Betrouwbare Monitoring</h3>
+                    <p>24/7 monitoring van uw netwerk infrastructuur met geavanceerde PRTG technologie</p>
+                </div>
+                <div class="about-item">
+                    <div class="about-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13 10V3L4 14h7v7l9-11h-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Real-time Performance</h3>
+                    <p>Directe inzichten in de prestaties van uw IT systemen en proactieve probleem detectie</p>
+                </div>
+                <div class="about-item">
+                    <div class="about-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Security Enhancement</h3>
+                    <p>Verhoogde beveiliging door continue monitoring en vroegtijdige detectie van bedreigingen</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ons Verhaal Section -->
+    <section id="ons-verhaal" class="section section-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Ons Verhaal</h2>
+                <p>Ontdek hoe wij bedrijven helpen om controle te krijgen over hun IT-omgeving</p>
+            </div>
+            <div class="story-content">
+                <div class="story-section">
+                    <p class="story-lead">Met jarenlange ervaring in diverse werkvelden hebben we één cruciale waarheid ontdekt: succesvolle bedrijven monitoren hun processen effectief. Innovatieve bedrijven zijn niet constant brandjes aan het blussen, maar hebben controle over hun operatie. Ze kunnen direct rapporteren, hun omgeving prioriteren en behouden altijd real-time overzicht in hun applicatie-, infrastructuur- en securitylandschap.</p>
+                    
+                    <p>Veel bedrijven monitoren verschillende aspecten, maar missen een centraal dashboard om al deze informatie te bundelen. Medewerkers hebben vaak wel de functionele kennis, maar niet de tijd of de technische expertise om alle componenten te implementeren en effectief te monitoren. Door dit aan ons uit te besteden, kunt u zich richten op wat echt belangrijk is: resultaten.</p>
+                </div>
+
+                <div class="story-grid">
+                    <div class="story-card">
+                        <div class="story-card-header">
+                            <div class="story-icon">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9 12l2 2 4-4M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3>Onze Oplossingen</h3>
+                        </div>
+                        <p>Onze oplossingen zijn perfect voor iedereen die werkt met private of public cloud, SaaS, IoT, fysieke hardware, netwerkapparatuur of on-premises omgevingen. Bedrijven met een complex applicatielandschap weten vaak niet of alles optimaal functioneert. Wij zorgen ervoor dat u altijd weet of de prestaties goed zijn, of er ongekende fouten zijn, en of er kritieke gebeurtenissen plaatsvinden. Wij helpen u om problemen voor te zijn.</p>
+                    </div>
+
+                    <div class="story-card">
+                        <div class="story-card-header">
+                            <div class="story-icon">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 7a4 4 0 108 0 4 4 0 00-8 0zM22 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3>Waarom Kiezen Voor Ons?</h3>
+                        </div>
+                        <div class="story-benefits">
+                            <div class="story-benefit">
+                                <h4>Open-Source Voordelen</h4>
+                                <p>Wij schrijven code in PowerShell of Python, wat het leesbaar en herbruikbaar maakt. Er hoeft niets gecompileerd te worden; alles is direct toegankelijk. Onze code staat in een persoonlijke Git-repo, waardoor change management gewaarborgd is.</p>
+                            </div>
+                            <div class="story-benefit">
+                                <h4>Training en Betrokkenheid</h4>
+                                <p>Uw personeel kent de applicaties het beste. Door hen bij het proces te betrekken, worden ze enthousiast en zelfredzaam, wat afhankelijkheid van een leverancier voorkomt. Wij zorgen ervoor dat fouten slechts één keer voorkomen door er direct een monitoringsensor op te zetten.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="story-card">
+                        <div class="story-card-header">
+                            <div class="story-icon">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 3a4 4 0 100 8 4 4 0 000-8zM24 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3>Samen Succesvol</h3>
+                        </div>
+                        <p>Wij werken nauw samen met u om uw omgeving in kaart te brengen en knelpunten te identificeren. Vervolgens ontwikkelen we de benodigde sensoren, zodat u zelf kunt monitoren of alles goed verloopt. Met onze oplossingen en trainingen heeft u de controle en kunt u innovatief blijven.</p>
+                        <div class="story-cta">
+                            <p><strong>Klaar om uw bedrijfsprocessen naar een hoger niveau te tillen?</strong></p>
+                            <a href="mailto:contact@re-scan.nl?subject=Ons Verhaal - Interesse in monitoring oplossingen&body=Hallo,%0D%0A%0D%0AIk heb jullie verhaal gelezen en ben geïnteresseerd in monitoring oplossingen.%0D%0A%0D%0ANaam:%0D%0ABedrijf:%0D%0ATelefoon:%0D%0A%0D%0AVragen:" class="btn btn-primary">
+                                <span class="icon-email"></span>Neem Contact Op
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio & Expertise Section -->
+    <section id="portfolio" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Portfolio & Expertise</h2>
+                <p>Concrete voorbeelden van onze technische capabilities</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-card">
+                    <div class="portfolio-header">
+                        <div class="portfolio-icon">
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <polyline points="14,2 14,8 20,8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <line x1="16" y1="13" x2="8" y2="13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <line x1="16" y1="17" x2="8" y2="17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>Wapnet Technical Blog</h3>
+                            <span class="portfolio-url">blog.wapnet.nl</span>
+                        </div>
+                    </div>
+                    <p>Thomas deelt zijn brede IT expertise via Wapnet Blog. Praktische tutorials over Linux, Windows, PowerShell, Azure, DevOps en monitoring voor IT professionals en systeembeheerders.</p>
+                    <a href="https://blog.wapnet.nl" target="_blank" rel="noopener noreferrer" class="portfolio-link">
+                        Bekijk Blog →
+                    </a>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-header">
+                        <div class="portfolio-icon">
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <line x1="7" y1="7" x2="7.01" y2="7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <line x1="17" y1="7" x2="17.01" y2="7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <line x1="7" y1="17" x2="7.01" y2="17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <line x1="17" y1="17" x2="17.01" y2="17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>KompassOS Linux Distributie</h3>
+                            <span class="portfolio-url">kompassos.nl</span>
+                        </div>
+                    </div>
+                    <p>Thomas ontwikkelde KompassOS, een gespecialiseerde Linux distributie voor DevOps professionals en systeembeheerders. Pre-geconfigureerd met monitoring tools, ontwikkeltools en geoptimaliseerd voor professionele workstations.</p>
+                    <a href="https://www.kompassos.nl" target="_blank" rel="noopener noreferrer" class="portfolio-link">
+                        Bekijk Distributie →
+                    </a>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-header">
+                        <div class="portfolio-icon">
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9 18c-4.51 2-5-2-7-2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>GitHub Development</h3>
+                            <span class="portfolio-url">github.com/l0g0ff</span>
+                        </div>
+                    </div>
+                    <p>Thomas ontwikkelt DevOps tools en system administrator oplossingen op GitHub. 27 repositories met focus op workstation optimalisatie, automation tools en comprehensive solutions voor technische professionals.</p>
+                    <a href="https://github.com/l0g0ff" target="_blank" rel="noopener noreferrer" class="portfolio-link">
+                        Bekijk Code →
+                    </a>
+                </div>
+
+                <div class="portfolio-card">
+                    <div class="portfolio-header">
+                        <div class="portfolio-icon">
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>LinkedIn Profiel</h3>
+                            <span class="portfolio-url">linkedin.com/in/thomas-faddegon</span>
+                        </div>
+                    </div>
+                    <p>Thomas Faddegon's professionele netwerk en carrière overzicht. 20+ jaar ervaring als IT specialist, systeembeheerder en monitoring expert, met focus op PRTG, Linux, DevOps en infrastructuur optimalisatie.</p>
+                    <a href="https://www.linkedin.com/in/thomas-faddegon/" target="_blank" rel="noopener noreferrer" class="portfolio-link">
+                        Bekijk Profiel →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <h2>Monitoring Capabilities</h2>
+                <p>Ontdek onze geavanceerde monitoring features</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Network Monitoring</h3>
+                    <p>Uitgebreide monitoring van alle netwerk componenten, van routers tot switches en servers</p>
+                    <ul>
+                        <li>Bandwidth monitoring</li>
+                        <li>Device uptime tracking</li>
+                        <li>Traffic analysis</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <h3>PRTG Integration</h3>
+                    <p>Professionele monitoring oplossingen gebouwd op het krachtige PRTG platform</p>
+                    <ul>
+                        <li>Custom dashboards</li>
+                        <li>Automated alerts</li>
+                        <li>Historical reporting</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <h3>Scalable Infrastructure</h3>
+                    <p>Monitoring oplossingen die meegroeien met uw bedrijf en IT infrastructuur</p>
+                    <ul>
+                        <li>Flexible sensor deployment</li>
+                        <li>Multi-location support</li>
+                        <li>Cloud integration</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Veelgestelde vragen over onze monitoring services</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Wat is PRTG monitoring?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div>
+                            <p>PRTG is een professionele network monitoring tool die real-time inzicht geeft in de performance van uw IT infrastructuur. Het monitort servers, netwerk devices, applicaties en meer.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Hoe snel krijg ik monitoring setup?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div>
+                            <p>Binnen een week hebben we meestal een solide basis staan. Je wilt niet rennen - wij werken vanuit rust. Goede monitoring vraagt om zorgvuldige analyse van uw omgeving, doordachte sensor configuratie en grondige testing. Haast leidt tot gemiste details, en juist die details maken het verschil tussen nuttige monitoring en alert-spam.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Welke support krijg ik?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div>
+                            <p>Na implementatie bent u grotendeels zelfvoorzienend - dat is juist de kracht van goede monitoring! Wij bieden support tijdens kantooruren voor vragen over optimalisaties, uitbreidingen of als er toch iets onduidelijk is. Het mooie van monitoring is dat het systeem zélf 24/7 voor u werkt.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Kunnen jullie de problemen naast het monitoren ook oplossen?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div>
+                            <p>Ja zeker, troubleshooten is onze passie! Maar monitoren is de fundering. Door eerst een solide monitoring basis te leggen, kunnen we problemen niet alleen sneller identificeren, maar ook structureel aanpakken. We lossen niet alleen het symptoom op, maar zorgen dat hetzelfde probleem zich niet meer voordoet door er direct monitoring voor te implementeren. Zo gaan we van reactief brandjes blussen naar proactief beheer.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Blog & Insights</h2>
+                <p>Ontdek de nieuwste trends en tips over network monitoring</p>
+            </div>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-meta">
+                        <span class="blog-date">26 september 2025</span>
+                        <span class="blog-category">PRTG Troubleshooting</span>
+                    </div>
+                    <h3>PRTG Error PE206 Oplossen: HTTP IoT Push Receiver Fix</h3>
+                    <p>Stap-voor-stap oplossing voor PRTG error PE206 bij HTTP IoT Push Data Advanced sensors. SSL certificaten fix voor remote probes in 5 minuten...</p>
+                    <a href="blog/prtg-error-pe206-http-iot-push-receiver-fix.html" class="blog-read-more">Lees meer →</a>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-meta">
+                        <span class="blog-date">1 september 2025</span>
+                        <span class="blog-category">AI & Development</span>
+                    </div>
+                    <h3>Van WordPress naar Statische Website in 2 Uur - Dankzij AI</h3>
+                    <p>Ontdek hoe ik mijn WordPress website volledig ombouwde naar moderne statische content in 2 uur, zonder één regel HTML te schrijven...</p>
+                    <a href="blog/wordpress-naar-statisch-met-ai.html" class="blog-read-more">Lees meer →</a>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-meta">
+                        <span class="blog-date">5 juli 2025</span>
+                        <span class="blog-category">Monitoring Optimization</span>
+                    </div>
+                    <h3>Monitoring alerting optimaliseren: van spam naar nuttige notificaties</h3>
+                    <p>Leer hoe je monitoring alerts optimaliseert van 50+ meldingen naar 2-3 relevante notificaties per dag. Van reactief naar proactief werken...</p>
+                    <a href="blog/monitoring-alerting-optimaliseren-spam-nuttige-notificaties.html" class="blog-read-more">Lees meer →</a>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-meta">
+                        <span class="blog-date">15 augustus 2024</span>
+                        <span class="blog-category">PRTG Tips</span>
+                    </div>
+                    <h3>Eenvoudig PRTG Dashboard Aanpassen met CSS</h3>
+                    <p>Leer hoe je je PRTG dashboard eenvoudig aanpast met CSS om acknowledged meldingen te filteren. Een simpele truc voor een overzichtelijker monitoring interface...</p>
+                    <a href="blog/eenvoudig-prtg-dashboard-aanpassen-css.html" class="blog-read-more">Lees meer →</a>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-meta">
+                        <span class="blog-date">5 juli 2024</span>
+                        <span class="blog-category">Website Monitoring</span>
+                    </div>
+                    <h3>Website Monitoring en Troubleshooting met PRTG</h3>
+                    <p>Leer hoe je effectief websites monitort met PRTG HTTP Advanced sensoren. Ontdek problemen voordat klanten ze merken en los storingen snel op...</p>
+                    <a href="blog/website-monitoring-troubleshooting.html" class="blog-read-more">Lees meer →</a>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-meta">
+                        <span class="blog-date">12 mei 2024</span>
+                        <span class="blog-category">Monitoring Tips</span>
+                    </div>
+                    <h3>Waarom je beter kunt stoppen met mail alerts</h3>
+                    <p>Mail alerts lijken handig, maar kunnen juist contraproductief werken. Ontdek waarom en wat de betere alternatieven zijn voor effectieve monitoring...</p>
+                    <a href="blog/waarom-stoppen-mail-alerts.html" class="blog-read-more">Lees meer →</a>
+                </article>
+            </div>
+            <div class="blog-cta">
+                <a href="blog/" class="btn btn-outline">Bekijk alle blog posts</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <h2>Pricing</h2>
+                <p>Kies het pakket dat bij uw behoeften past</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Hosting</h3>
+                    <p class="pricing-tagline">Scalable monitoring, simplified</p>
+                    <div class="price">€300<span>/Maand</span></div>
+                    <ul>
+                        <li>PRTG Hosted Monitoring</li>
+                        <li>500 Sensoren</li>
+                        <li>Onbeperkte opslag voor metrics</li>
+                        <li>Maandelijkse rapportages</li>
+                        <li>Email Support</li>
+                        <li>Plug & Play TV Adapter</li>
+                        <li>Uitbreiden mogelijk</li>
+                        <li>Inclusief updates</li>
+                        <li>Maandelijks opzegbaar</li>
+                    </ul>
+                    <a href="mailto:contact@re-scan.nl" class="btn btn-outline">Neem Contact Op</a>
+                </div>
+                <div class="pricing-card featured">
+                    <h3>Consultancy</h3>
+                    <p class="pricing-tagline">No cure / No pay</p>
+                    <div class="price">€125<span>/Uur</span></div>
+                    <ul>
+                        <li>Maatwerk sensoren</li>
+                        <li>Deployment</li>
+                        <li>Blueprint Business landschap</li>
+                        <li>Telefonisch support</li>
+                        <li>On-Site & Remote Support</li>
+                        <li>Migraties naar PRTG</li>
+                        <li>Troubleshooting</li>
+                    </ul>
+                    <a href="mailto:contact@re-scan.nl" class="btn btn-primary">Neem Contact Op</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Training</h3>
+                    <p class="pricing-tagline">Get your team to the next level</p>
+                    <div class="price">€999<span>/Dag</span></div>
+                    <ul>
+                        <li>On-site of remote</li>
+                        <li>Introductie PRTG</li>
+                        <li>Creëer een custom sensor</li>
+                        <li>(Bulk) Sensor deployment</li>
+                        <li>Maak een dashboard</li>
+                        <li>Maak een plattegrond</li>
+                    </ul>
+                    <a href="mailto:contact@re-scan.nl" class="btn btn-outline">Neem Contact Op</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Neem Contact Op</h2>
+                <p>Klaar om te beginnen met professionele monitoring? Laten we praten!</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Contact Informatie</h3>
+                    <div class="contact-item">
+                        <strong>Email:</strong>
+                        <a href="mailto:contact@re-scan.nl">contact@re-scan.nl</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Telefoon:</strong>
+                        <a href="tel:+31638254639">+31 6 38 254 639</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Adres:</strong>
+                        <p>Dokter Tombrocklaan 8<br>5056NK Berkel-Enschot</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Direct Contact</h3>
+                    <p>Klik op onderstaande knop om direct een email te sturen:</p>
+                    <a href="mailto:contact@re-scan.nl?subject=Informatie Re-Scan Monitor Solutions&body=Hallo,%0D%0A%0D%0AIk ben geïnteresseerd in jullie monitoring oplossingen.%0D%0A%0D%0ANaam:%0D%0ABedrijf:%0D%0ATelefoon:%0D%0A%0D%0AVragen:%0D%0A" class="btn btn-primary" style="display: inline-block; margin-top: 1rem;">
+                        <span class="icon-email"></span>Stuur Email
+                    </a>
+                    <div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #e2e8f0;">
+                        <p><strong>Of bel direct:</strong></p>
+                        <a href="tel:+31638254639" class="btn btn-outline" style="display: inline-block;">
+                            <span class="icon-phone"></span>+31 6 38 254 639
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="brand-text">Re-Scan Monitor Solutions</span>
+                </div>
+                <p>Copyright &copy; 2025 Re-Scan Monitor Solutions - KvK: 94485976</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
