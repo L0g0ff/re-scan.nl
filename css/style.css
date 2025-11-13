@@ -1397,6 +1397,16 @@ body.kiss-mode {
     font-size: 0.95rem;
 }
 
+.footer-kiss a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-kiss a:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
 /* KISS Mode Responsive */
 @media (max-width: 768px) {
     .container-kiss {
