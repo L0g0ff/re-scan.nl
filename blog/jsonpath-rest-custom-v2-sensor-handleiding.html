@@ -9,7 +9,7 @@
     <meta name="keywords" content="PRTG JSONPath, REST Custom v2 sensor, JSON API monitoring, PRTG API sensor, JSONPath filtering, PRTG sensor configuratie">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/blog.css">
     <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
@@ -40,50 +40,29 @@
     }
     </script>
 </head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <a href="../">
-                    <span class="brand-text">Re-Scan Monitor Solutions</span>
-                </a>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="../#home">Home</a></li>
-                <li><a href="../#about">About</a></li>
-                <li><a href="../#features">Features</a></li>
-                <li><a href="../blog/">Blog</a></li>
-                <li><a href="../#pricing">Pricing</a></li>
-                <li><a href="mailto:contact@re-scan.nl" class="cta-button">Neem Contact Op</a></li>
-            </ul>
-            <div class="mobile-menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+<body class="kiss-mode">
+    <!-- Simple Header -->
+    <header class="blog-header-kiss">
+        <div class="container-kiss">
+            <a href="../" class="brand-link-kiss">Re-Scan Monitor Solutions</a>
         </div>
-    </nav>
+    </header>
 
     <!-- Article Header -->
-    <section class="article-header">
-        <div class="container">
-            <div class="breadcrumb">
-                <a href="../">Home</a> / <a href="../blog/">Blog</a> / <span>JSONPath in REST Custom v2 Sensor</span>
-            </div>
-            <h1>JSONPath in PRTG REST Custom v2 Sensor: Complete Handleiding</h1>
-            <div class="article-meta">
-                <span class="author">Door Thomas</span>
-                <span class="date">22 december 2025</span>
-                <span class="category">PRTG Gids</span>
-                <span class="read-time">4 min leestijd</span>
+    <section class="article-header-kiss">
+        <div class="container-kiss">
+            <h1>JSONPath in PRTG REST Custom v2 Sensor</h1>
+            <div class="article-meta-kiss">
+                <span>22 december 2025</span>
+                <span>•</span>
+                <span>4 min leestijd</span>
             </div>
         </div>
     </section>
 
     <!-- Article Content -->
-    <article class="article-content">
-        <div class="container">
+    <article class="article-content-kiss">
+        <div class="container-kiss">
             <div class="article-body">
                 <div class="article-image">
                     <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=400&fit=crop"
@@ -251,23 +230,19 @@ $.optional_field || 0</code></pre>
                 <h2>Conclusie</h2>
                 <p>Met REST Custom v2 en JSONPath kun je zonder code complexe API monitoring opzetten. Het Monday.com voorbeeld toont hoe je met filtering en aggregatie specifieke data monitort. Let op PRTG's implementatie verschillen, vooral rond array indexing na filters.</p>
 
-                <div class="article-cta">
-                    <h3>Hulp nodig bij REST API monitoring?</h3>
-                    <p>Bij Re-Scan Monitor Solutions hebben we uitgebreide ervaring met het opzetten van API monitoring in PRTG. Van complexe JSONPath queries tot complete monitoring strategieën.</p>
-                    <a href="mailto:contact@re-scan.nl?subject=REST API Monitoring Hulp&body=Hallo,%0D%0A%0D%0AIk ben geïnteresseerd in ondersteuning bij REST API monitoring in PRTG.%0D%0A%0D%0AType API:%0D%0AMonitoring doelen:%0D%0AOrganisatie:%0D%0AContactpersoon:%0D%0ATelefoon:%0D%0A%0D%0AVragen:" class="btn btn-primary">
-                        Vraag API Monitoring Advies
-                    </a>
+                <div class="article-cta-kiss">
+                    <h3>Hulp nodig?</h3>
+                    <p>Neem contact op voor API monitoring advies.</p>
+                    <div class="cta-buttons-kiss">
+                        <a href="tel:+31638254639" class="btn-kiss-inline">Bel: +31 6 38 254 639</a>
+                        <a href="mailto:contact@re-scan.nl" class="btn-kiss-inline">Mail: contact@re-scan.nl</a>
+                    </div>
                 </div>
             </div>
 
             <!-- Article sidebar -->
-            <aside class="article-sidebar">
-                <div class="sidebar-box">
-                    <h3>Over de Auteur</h3>
-                    <p><strong>Thomas</strong> heeft uitgebreide ervaring met PRTG API monitoring en REST sensor configuratie. Hij helpt organisaties bij het monitoren van cloud services en custom applicaties met native PRTG sensoren.</p>
-                </div>
-
-                <div class="sidebar-box">
+            <aside class="article-sidebar-kiss">
+                <div class="sidebar-box-kiss">
                     <h3>Gerelateerde Artikelen</h3>
                     <ul>
                         <li><a href="prtg-error-pe206-http-iot-push-receiver-fix.html">PRTG Error PE206 Oplossen</a></li>
@@ -276,7 +251,7 @@ $.optional_field || 0</code></pre>
                     </ul>
                 </div>
 
-                <div class="sidebar-box">
+                <div class="sidebar-box-kiss">
                     <h3>JSONPath Quick Reference</h3>
                     <ul>
                         <li><code>$.property</code> - Root property</li>
@@ -287,7 +262,7 @@ $.optional_field || 0</code></pre>
                     </ul>
                 </div>
 
-                <div class="sidebar-box">
+                <div class="sidebar-box-kiss">
                     <h3>PRTG Verschillen</h3>
                     <ul>
                         <li>Gebruik <code>length()</code></li>
@@ -296,28 +271,15 @@ $.optional_field || 0</code></pre>
                         <li>Test in PRTG zelf</li>
                     </ul>
                 </div>
-
-                <div class="sidebar-box">
-                    <h3>Hulp Nodig?</h3>
-                    <p>Kom je er niet uit met jouw API monitoring setup? We helpen graag met complexe JSONPath queries en sensor configuraties.</p>
-                    <a href="mailto:contact@re-scan.nl?subject=JSONPath Hulp" class="btn btn-outline btn-small">Vraag Advies</a>
-                </div>
             </aside>
         </div>
     </article>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <span class="brand-text">Re-Scan Monitor Solutions</span>
-                </div>
-                <p>Copyright &copy; 2025 Re-Scan Monitor Solutions - KvK: 94485976</p>
-            </div>
+    <footer class="footer-kiss">
+        <div class="container-kiss">
+            <p>Re-Scan Monitor Solutions | KvK: 94485976 | Thomas Faddegon | <a href="../blog/">Blog</a> | <a href="../">Home</a></p>
         </div>
     </footer>
-
-    <script src="../js/script.js"></script>
 </body>
 </html>
