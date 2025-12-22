@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSONPath in PRTG REST Custom v2 Sensor: Complete Handleiding | Re-Scan Monitor Solutions</title>
+    <meta name="description" content="Leer JSONPath gebruiken in PRTG REST Custom v2 sensors. Van basis JSON parsing tot geavanceerde filtering en aggregatie. Inclusief praktische voorbeelden.">
+    <meta name="author" content="Thomas">
+    <meta name="keywords" content="PRTG JSONPath, REST Custom v2 sensor, JSON API monitoring, PRTG API sensor, JSONPath filtering, PRTG sensor configuratie">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/blog.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "JSONPath in PRTG REST Custom v2 Sensor: Complete Handleiding",
+        "author": {
+            "@type": "Person",
+            "name": "Thomas"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Re-Scan Monitor Solutions",
+            "url": "https://www.re-scan.nl"
+        },
+        "datePublished": "2025-12-22",
+        "dateModified": "2025-12-22",
+        "description": "Leer JSONPath gebruiken in PRTG REST Custom v2 sensors. Van basis JSON parsing tot geavanceerde filtering en aggregatie.",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.re-scan.nl/blog/jsonpath-rest-custom-v2-sensor-handleiding.html"
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="../">
+                    <span class="brand-text">Re-Scan Monitor Solutions</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../#home">Home</a></li>
+                <li><a href="../#about">About</a></li>
+                <li><a href="../#features">Features</a></li>
+                <li><a href="../blog/">Blog</a></li>
+                <li><a href="../#pricing">Pricing</a></li>
+                <li><a href="mailto:contact@re-scan.nl" class="cta-button">Neem Contact Op</a></li>
+            </ul>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Article Header -->
+    <section class="article-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../">Home</a> / <a href="../blog/">Blog</a> / <span>JSONPath in REST Custom v2 Sensor</span>
+            </div>
+            <h1>JSONPath in PRTG REST Custom v2 Sensor: Complete Handleiding</h1>
+            <div class="article-meta">
+                <span class="author">Door Thomas</span>
+                <span class="date">22 december 2025</span>
+                <span class="category">PRTG Gids</span>
+                <span class="read-time">4 min leestijd</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <article class="article-content">
+        <div class="container">
+            <div class="article-body">
+                <div class="article-image">
+                    <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=400&fit=crop"
+                         alt="JSON API monitoring met PRTG"
+                         loading="lazy">
+                </div>
+
+                <p class="lead">De REST Custom v2 sensor is een native PRTG sensor waarmee je zonder custom scripts APIs kunt monitoren via JSONPath queries. Deze handleiding laat zien hoe je JSON data effectief parsed en monitort.</p>
+
+                <h2>REST Custom v2 + JSONPath</h2>
+                <p>De REST Custom v2 sensor maakt HTTP(S) requests naar API endpoints en parsed JSON responses met JSONPath. Je kunt hiermee cloud services, custom applicaties en IoT devices monitoren zonder PowerShell of Python scripts.</p>
+
+                <h2>JSONPath Basis Syntax</h2>
+                <div class="code-block">
+                    <pre><code>$                  Root object
+$.property         Child property
+$.array[0]         Array element op index 0
+[?(@.x > 5)]       Filter expressie
+length($.array)    Tel array elementen
+&& en ||           AND / OR operators</code></pre>
+                </div>
+
+                <h2>Voorbeeld: Monday.com Status Monitoring</h2>
+                <p>We monitoren de Monday.com status API en filteren op EU componenten.</p>
+
+                <h3>JSON Response Structuur</h3>
+                <p>API: <code>https://status.monday.com/api/v2/summary.json</code></p>
+
+                <div class="code-block">
+                    <pre><code>{
+  "status": {
+    "indicator": "none",
+    "description": "All Systems Operational"
+  },
+  "components": [
+    {
+      "id": "xyz123",
+      "name": "Platform",
+      "status": "operational",
+      "group_id": "qxcz5495fl3r"
+    },
+    {
+      "id": "abc456",
+      "name": "API",
+      "status": "operational",
+      "group_id": "qxcz5495fl3r"
+    }
+  ],
+  "incidents": []
+}</code></pre>
+                </div>
+
+                <h3>Sensor Configuratie</h3>
+                <div class="code-block">
+                    <pre><code>Request URL: https://status.monday.com/api/v2/summary.json
+Request Method: GET
+Authentication: None</code></pre>
+                </div>
+
+                <h3>Channels met JSONPath</h3>
+
+                <h4>Channel 1: Tel Niet-Operationele EU Componenten</h4>
+                <div class="code-block">
+                    <pre><code>JSONPath: length($.components[?(@.group_id == 'qxcz5495fl3r' && @.status != 'operational')])
+Value Type: Absolute (integer)
+Upper Error Limit: 1</code></pre>
+                </div>
+                <p><strong>Uitleg:</strong> Filter op EU region (<code>group_id == 'qxcz5495fl3r'</code>) én niet operationeel, tel het resultaat.</p>
+
+                <h4>Channel 2: Actieve Incidents</h4>
+                <div class="code-block">
+                    <pre><code>JSONPath: length($.incidents)
+Value Type: Absolute (integer)</code></pre>
+                </div>
+
+                <h4>Channel 3: Overall Status</h4>
+                <div class="code-block">
+                    <pre><code>JSONPath: $.status.indicator
+Value Type: Status (string)</code></pre>
+                </div>
+
+                <h4>Channel 4: EU Platform Status</h4>
+                <div class="code-block">
+                    <pre><code>JSONPath: $.components[?(@.group_id == 'qxcz5495fl3r' && @.name == 'Platform')].status
+Value Type: Status (string)</code></pre>
+                </div>
+                <p>PRTG haalt automatisch de eerste waarde uit het gefilterde resultaat.</p>
+
+                <h2>PRTG JSONPath Verschillen</h2>
+                <p>PRTG gebruikt de Paessler JSONPath implementatie met specifieke kenmerken:</p>
+                <ul>
+                    <li>Gebruik <code>length()</code> niet <code>len()</code></li>
+                    <li>Directe array indexing werkt: <code>$.array[0].property</code></li>
+                    <li>Maar: geen <code>[0]</code> NA filter expressies - PRTG haalt automatisch de eerste waarde</li>
+                    <li><code>&&</code> en <code>||</code> operators worden ondersteund</li>
+                    <li>Gebruik "Status (string)" voor custom status waarden, niet "Lookup"</li>
+                </ul>
+
+                <h2>Array Indexing: Direct vs. Na Filter</h2>
+                <p><strong>Belangrijk verschil:</strong> [0] mag WEL bij directe array indexing, maar NIET na een filter expressie.</p>
+                <div class="code-block">
+                    <pre><code>GOED - Directe array index (zonder filter):
+$.servers[0].status
+$.users[5].name
+
+GOED - Property na filter (geen [0] nodig):
+$.components[?(@.status == 'down')].name
+$.users[?(@.role == 'admin')].email
+
+FOUT - [0] NA een filter expressie:
+$.components[?(@.status == 'down')][0].name</code></pre>
+                </div>
+                <p>PRTG haalt automatisch de eerste waarde uit gefilterde resultaten.</p>
+
+                <h2>Geavanceerde Technieken</h2>
+
+                <h3>Filtering met Meerdere Condities</h3>
+                <div class="code-block">
+                    <pre><code>// AND
+$.users[?(@.active == true && @.role == 'admin')]
+
+// OR
+$.servers[?(@.status == 'warning' || @.status == 'error')]
+
+// Numeriek
+$.metrics[?(@.cpu_usage > 80)]</code></pre>
+                </div>
+
+                <h3>Nested Structuren</h3>
+                <div class="code-block">
+                    <pre><code>// Direct indexing
+$.users[0].permissions[0].level
+
+// Filter in nested array
+$.departments[?(@.name == 'IT')].employees.salary</code></pre>
+                </div>
+
+                <h3>Handige Functies</h3>
+                <div class="code-block">
+                    <pre><code>// Tel items
+length($.errors)
+
+// Fallback waarde
+$.optional_field || 0</code></pre>
+                </div>
+
+                <h2>Performance & Limieten</h2>
+                <ul>
+                    <li><strong>Scanning Interval:</strong> 60 seconden voor status APIs</li>
+                    <li><strong>Timeout:</strong> 60 seconden voor externe APIs</li>
+                    <li><strong>Channel Limiet:</strong> Max 10 channels (REST Custom v2) of 50 channels (REST Custom legacy met .template files)</li>
+                    <li><strong>API Rate Limiting:</strong> Check API documentatie</li>
+                </ul>
+
+
+                <h2>Beste Praktijken</h2>
+                <ul>
+                    <li>Begin met 2-3 kritieke channels, bouw daarna uit</li>
+                    <li>Gebruik beschrijvende channel namen</li>
+                    <li>Stel altijd error limits in</li>
+                    <li>Monitor eerst availability, dan metrics</li>
+                    <li>Test in PRTG - online evaluators kunnen verschillen</li>
+                </ul>
+
+                <h2>Conclusie</h2>
+                <p>Met REST Custom v2 en JSONPath kun je zonder code complexe API monitoring opzetten. Het Monday.com voorbeeld toont hoe je met filtering en aggregatie specifieke data monitort. Let op PRTG's implementatie verschillen, vooral rond array indexing na filters.</p>
+
+                <div class="article-cta">
+                    <h3>Hulp nodig bij REST API monitoring?</h3>
+                    <p>Bij Re-Scan Monitor Solutions hebben we uitgebreide ervaring met het opzetten van API monitoring in PRTG. Van complexe JSONPath queries tot complete monitoring strategieën.</p>
+                    <a href="mailto:contact@re-scan.nl?subject=REST API Monitoring Hulp&body=Hallo,%0D%0A%0D%0AIk ben geïnteresseerd in ondersteuning bij REST API monitoring in PRTG.%0D%0A%0D%0AType API:%0D%0AMonitoring doelen:%0D%0AOrganisatie:%0D%0AContactpersoon:%0D%0ATelefoon:%0D%0A%0D%0AVragen:" class="btn btn-primary">
+                        Vraag API Monitoring Advies
+                    </a>
+                </div>
+            </div>
+
+            <!-- Article sidebar -->
+            <aside class="article-sidebar">
+                <div class="sidebar-box">
+                    <h3>Over de Auteur</h3>
+                    <p><strong>Thomas</strong> heeft uitgebreide ervaring met PRTG API monitoring en REST sensor configuratie. Hij helpt organisaties bij het monitoren van cloud services en custom applicaties met native PRTG sensoren.</p>
+                </div>
+
+                <div class="sidebar-box">
+                    <h3>Gerelateerde Artikelen</h3>
+                    <ul>
+                        <li><a href="prtg-error-pe206-http-iot-push-receiver-fix.html">PRTG Error PE206 Oplossen</a></li>
+                        <li><a href="website-monitoring-troubleshooting.html">Website Monitoring met PRTG</a></li>
+                        <li><a href="monitoring-alerting-optimaliseren-spam-nuttige-notificaties.html">Alert Optimalisatie Gids</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-box">
+                    <h3>JSONPath Quick Reference</h3>
+                    <ul>
+                        <li><code>$.property</code> - Root property</li>
+                        <li><code>$.array[0]</code> - Array index</li>
+                        <li><code>$[?(@.x > 5)]</code> - Filter</li>
+                        <li><code>length()</code> - Tel items</li>
+                        <li><code>&&</code> / <code>||</code> - AND/OR</li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-box">
+                    <h3>PRTG Verschillen</h3>
+                    <ul>
+                        <li>Gebruik <code>length()</code></li>
+                        <li>Geen <code>[0]</code> na filters</li>
+                        <li>Max 10 channels (v2)</li>
+                        <li>Test in PRTG zelf</li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-box">
+                    <h3>Hulp Nodig?</h3>
+                    <p>Kom je er niet uit met jouw API monitoring setup? We helpen graag met complexe JSONPath queries en sensor configuraties.</p>
+                    <a href="mailto:contact@re-scan.nl?subject=JSONPath Hulp" class="btn btn-outline btn-small">Vraag Advies</a>
+                </div>
+            </aside>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="brand-text">Re-Scan Monitor Solutions</span>
+                </div>
+                <p>Copyright &copy; 2025 Re-Scan Monitor Solutions - KvK: 94485976</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
