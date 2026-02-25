@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teams Webhook Aanmaken voor PRTG Notificaties | Re-Scan Monitor Solutions</title>
+    <meta name="description" content="Stap-voor-stap handleiding: maak een Microsoft Teams webhook aan via Workflows en koppel deze aan PRTG voor directe monitoring meldingen in je Teams kanaal.">
+    <meta name="author" content="Thomas Faddegon">
+    <meta name="keywords" content="Teams webhook, PRTG notificaties, Microsoft Teams, PRTG alerting, webhook configureren, monitoring meldingen Teams">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/blog.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Teams Webhook Aanmaken voor PRTG Notificaties",
+        "author": {
+            "@type": "Person",
+            "name": "Thomas Faddegon"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Re-Scan Monitor Solutions",
+            "url": "https://www.re-scan.nl"
+        },
+        "datePublished": "2026-02-25",
+        "dateModified": "2026-02-25",
+        "description": "Stap-voor-stap handleiding: maak een Microsoft Teams webhook aan via Workflows en koppel deze aan PRTG voor directe monitoring meldingen in je Teams kanaal.",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.re-scan.nl/blog/teams-webhook-prtg-notificaties.html"
+        }
+    }
+    </script>
+</head>
+<body class="kiss-mode">
+    <!-- Simple Header -->
+    <header class="blog-header-kiss">
+        <div class="container-kiss">
+            <a href="../" class="brand-link-kiss">Re-Scan Monitor Solutions</a>
+        </div>
+    </header>
+
+    <!-- Article Header -->
+    <section class="article-header-kiss">
+        <div class="container-kiss">
+            <h1>Teams Webhook Aanmaken voor PRTG Notificaties</h1>
+            <div class="article-meta-kiss">
+                <span class="date">25 februari 2026</span>
+                <span class="read-time">3 min leestijd</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <article class="article-content-kiss">
+        <div class="container-kiss">
+            <div class="article-body">
+
+                <p class="lead">Wil je PRTG meldingen direct in Microsoft Teams ontvangen? Met een webhook koppel je PRTG in een paar stappen aan een Teams kanaal.</p>
+
+                <h2>Stap 1: Maak een Teams kanaal aan</h2>
+
+                <p>Maak een apart kanaal aan voor je monitoring meldingen, bijvoorbeeld <strong>PRTG-Alerts</strong>. Kies als layout voor <strong>Posts</strong> zodat meldingen overzichtelijk worden weergegeven.</p>
+
+                <div class="article-image">
+                    <img src="../images/blog/teams-alerts/teams-1.png"
+                         alt="Teams kanaal PRTG-Alerts aanmaken" loading="lazy">
+                </div>
+
+                <h2>Stap 2: Open Workflows via het kanaal</h2>
+
+                <p>Klik op de drie puntjes naast het kanaal en kies <strong>Workflows</strong>.</p>
+
+                <div class="article-image">
+                    <img src="../images/blog/teams-alerts/teams-2.png"
+                         alt="Workflows openen via kanaal menu" loading="lazy">
+                </div>
+
+                <h2>Stap 3: Zoek naar "webhook"</h2>
+
+                <p>Zoek op <strong>webhook</strong> en kies <strong>Send webhook alerts to a channel</strong>.</p>
+
+                <div class="article-image">
+                    <img src="../images/blog/teams-alerts/teams-3.png"
+                         alt="Webhook workflow zoeken en selecteren" loading="lazy">
+                </div>
+
+                <h2>Stap 4: Configureer de workflow</h2>
+
+                <p>Selecteer het team en kanaal waarnaartoe de meldingen gestuurd moeten worden en klik op <strong>Save</strong>.</p>
+
+                <div class="article-image">
+                    <img src="../images/blog/teams-alerts/teams-4.png"
+                         alt="Webhook workflow configureren met team en kanaal" loading="lazy">
+                </div>
+
+                <h2>Stap 5: Kopieer de webhook URL</h2>
+
+                <p>De workflow is aangemaakt. Klik op <strong>Copy webhook link</strong> om de URL te kopiëren — die heb je nodig in PRTG.</p>
+
+                <div class="article-image">
+                    <img src="../images/blog/teams-alerts/teams-5.png"
+                         alt="Webhook link kopiëren" loading="lazy">
+                </div>
+
+                <h2>Stap 6: Voeg de webhook in in PRTG</h2>
+
+                <p>Ga in PRTG naar <strong>Setup → Notification Templates</strong> en voeg een nieuw template toe van het type <strong>Send Microsoft Teams Message</strong>. Plak de gekopieerde webhook URL in het veld <em>Teams Webhook URL</em> en stel de gewenste velden in, zoals naam, status en laatste scan.</p>
+
+                <p>Koppel het notification template aan een trigger op een sensor of apparaat en test de melding. PRTG stuurt voortaan alerts rechtstreeks naar je Teams kanaal.</p>
+
+                <div class="article-cta">
+                    <h3>Hulp nodig bij PRTG en Teams integratie?</h3>
+                    <p>Bij Re-Scan Monitor Solutions helpen we bedrijven met het inrichten van een complete monitoring strategie, inclusief alerting via Teams, e-mail en andere kanalen.</p>
+                    <a href="mailto:contact@re-scan.nl?subject=PRTG Teams Integratie" class="btn btn-primary">
+                        Neem Contact Op
+                    </a>
+                </div>
+            </div>
+
+            <!-- Article sidebar -->
+            <aside class="article-sidebar">
+                <div class="sidebar-box">
+                    <h3>Over de Auteur</h3>
+                    <p><strong>Thomas Faddegon</strong> heeft uitgebreide ervaring met PRTG en integratievraagstukken. Hij helpt organisaties bij het opzetten van effectieve monitoring en alerting.</p>
+                </div>
+
+                <div class="sidebar-box">
+                    <h3>Gerelateerde Artikelen</h3>
+                    <ul>
+                        <li><a href="waarom-stoppen-mail-alerts.html">Waarom je beter kunt stoppen met mail alerts</a></li>
+                        <li><a href="monitoring-alerting-optimaliseren-spam-nuttige-notificaties.html">Alert Optimalisatie Gids</a></li>
+                        <li><a href="eenvoudig-prtg-dashboard-aanpassen-css.html">PRTG Dashboard Aanpassen met CSS</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-box">
+                    <h3>Hulp Nodig?</h3>
+                    <p>Kom je er niet uit met jouw PRTG configuratie? Re-Scan Monitor Solutions helpt met complexe monitoring uitdagingen.</p>
+                    <a href="mailto:contact@re-scan.nl?subject=PRTG Teams Webhook Hulp" class="btn btn-outline btn-small">Vraag Advies</a>
+                </div>
+            </aside>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer-kiss">
+        <div class="container-kiss">
+            <p>Copyright &copy; 2026 Re-Scan Monitor Solutions - KvK: 94485976 | <a href="../blog/">Blog</a> | <a href="../">Home</a></p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
