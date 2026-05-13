@@ -1322,6 +1322,45 @@ body.kiss-mode {
     font-weight: bold;
 }
 
+/* Sensor Audit Callout */
+.sensor-audit-callout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 3rem auto 0;
+    background: var(--navy);
+    border-radius: 12px;
+    padding: 2.5rem 3rem;
+}
+
+.sensor-audit-text strong {
+    display: block;
+    font-size: 1.4rem;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.sensor-audit-text p {
+    color: #94a3b8;
+    font-size: 1rem;
+    margin: 0;
+    max-width: 600px;
+}
+
+@media (max-width: 768px) {
+    .sensor-audit-callout {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1.5rem;
+    }
+
+    .sensor-audit-text p {
+        max-width: 100%;
+    }
+}
+
 /* Contact Section - KISS */
 .contact-kiss {
     padding: 6rem 0;

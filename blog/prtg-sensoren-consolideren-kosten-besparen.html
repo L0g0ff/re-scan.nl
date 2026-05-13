@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRTG Sensoren Consolideren: Licentiekosten Verlagen Zonder Concessies | Re-Scan Monitor Solutions</title>
+    <meta name="description" content="PRTG te duur geworden? Leer hoe je met sensor consolidatie je licentietier verlaagt zonder monitorcoverage te verliezen. Praktische strategieën en concrete voorbeelden.">
+    <meta name="author" content="Thomas Faddegon">
+    <meta name="keywords" content="PRTG sensoren consolideren, PRTG licentie kosten, PRTG sensor audit, PRTG goedkoper, sensor count verlagen, PRTG licentiebeheer">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/blog.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "PRTG Sensoren Consolideren: Licentiekosten Verlagen Zonder Concessies",
+        "author": {
+            "@type": "Person",
+            "name": "Thomas Faddegon"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Re-Scan Monitor Solutions",
+            "url": "https://www.re-scan.nl"
+        },
+        "datePublished": "2026-05-13",
+        "dateModified": "2026-05-13",
+        "description": "PRTG te duur geworden? Leer hoe je met sensor consolidatie je licentietier verlaagt zonder monitorcoverage te verliezen.",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.re-scan.nl/blog/prtg-sensoren-consolideren-kosten-besparen.html"
+        }
+    }
+    </script>
+</head>
+<body class="kiss-mode">
+    <!-- Simple Header -->
+    <header class="blog-header-kiss">
+        <div class="container-kiss">
+            <a href="../" class="brand-link-kiss">Re-Scan Monitor Solutions</a>
+        </div>
+    </header>
+
+    <!-- Article Header -->
+    <section class="article-header-kiss">
+        <div class="container-kiss">
+            <h1>PRTG Sensoren Consolideren: Licentiekosten Verlagen Zonder Concessies</h1>
+            <div class="article-meta-kiss">
+                <span class="date">13 mei 2026</span>
+                <span class="read-time">6 min leestijd</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Content -->
+    <article class="article-content-kiss">
+        <div class="container-kiss">
+            <div class="article-body">
+
+                <p class="lead">PRTG is jarenlang betaalbaar gebleven, maar de licentietiers zijn strak: 500, 1000, 2500 of 5000 sensoren. Zit je op 520 sensoren? Dan betaal je voor de 1000-tier. Met een gerichte audit breng je dat terug, zonder dat je iets mist.</p>
+
+                <h2>Voordat je overstapt naar Zabbix of Nagios</h2>
+
+                <p>Als de PRTG-licentie te duur wordt, is de eerste gedachte vaak: dan switchen we naar iets anders. Zabbix is open source, Nagios ook. Op papier kost het niets.</p>
+
+                <p>Maar een overstap heeft een prijs die niet op de licentierekening staat. Alle bestaande sensoren opnieuw bouwen. Dashboards opnieuw inrichten. Iedereen in je team bijscholen op nieuwe tooling, nieuwe workflows, nieuwe foutmeldingen. En tot die tijd: minder zicht op je omgeving dan je gewend bent.</p>
+
+                <p>In de meeste gevallen is dat niet nodig. De PRTG-installatie zit gewoon vol met overbodige sensoren die er bij zijn gekomen zonder dat iemand er bewust voor koos. Ruim dat op, en de licentietier gaat omlaag zonder dat iemand iets nieuws hoeft te leren.</p>
+
+                <h2>Waarom groeit je sensoraantal ongemerkt?</h2>
+
+                <p>Bij iedere PRTG-installatie sluipen extra sensoren erin. Auto-discovery voegt standaard tientallen sensoren per apparaat toe. Er worden servers gemonitord die al jaren geleden zijn uitgezet. En voor elk nieuw systeem worden sensoren aangemaakt zonder dat de oude worden opgeruimd.</p>
+
+                <p>Veelvoorkomende oorzaken van sensor-bloat:</p>
+
+                <ul>
+                    <li><strong>Auto-discovery restanten</strong>: standaard voegt PRTG bij discovery alle beschikbare sensor-types toe per apparaat, waarvan je er in de praktijk maar een fractie nodig hebt</li>
+                    <li><strong>Legacy devices</strong>: servers, switches of services die zijn uitgeschakeld maar waarvan de sensoren nooit zijn verwijderd</li>
+                    <li><strong>Redundante controles</strong>: dezelfde metric via WMI én via SNMP, of zowel een ping-sensor als een HTTP-sensor op hetzelfde doel</li>
+                    <li><strong>Gefragmenteerde scripts</strong>: voor elke metric een apart EXE/Script sensor, terwijl één sensor met meerdere kanalen volstaat</li>
+                </ul>
+
+                <h2>Strategie 1: Eén script, meerdere kanalen</h2>
+
+                <p>Dit is verreweg de meest effectieve consolidatiestrategie. PRTG EXE/Script Advanced sensors kunnen meerdere waarden teruggeven als JSON of XML. Eén sensor kan zo tientallen metrics monitoren die je anders als losse sensoren zou aanmaken.</p>
+
+                <p>Voorbeeld: in plaats van aparte sensoren voor CPU, geheugen, schijfruimte, services en uptime per server, schrijf je één PowerShell script dat alle vijf waarden teruggeeft als kanalen in één sensor. Vijf sensoren worden één.</p>
+
+                <p>Hetzelfde principe werkt voor API-monitoring. Eén REST Custom v2 sensor met meerdere JSONPath-queries vervangt vijf losse sensoren die elk een ander endpoint aanroepen.</p>
+
+                <h2>Strategie 2: SNMP boven WMI waar mogelijk</h2>
+
+                <p>WMI-sensoren zijn individueel: één sensor per metric. SNMP Traffic sensors bewaken alle interfaces van een switch of router in één sensor, waarbij elke interface een kanaal wordt. Voor een switch met 24 poorten zijn dat 24 kanalen in één sensor versus tot 24 losse WMI of SNMP-sensoren.</p>
+
+                <p>Bijkomend voordeel: SNMP is aanzienlijk minder belastend voor de gemonitorde apparaten dan WMI.</p>
+
+                <h2>Strategie 3: Opschonen van legacy sensoren</h2>
+
+                <p>In elke installatie ouder dan twee jaar zitten sensoren die nooit alertte, altijd groen zijn, of monitoren wat al lang niet meer bestaat. Een eenvoudige check: filter in PRTG op sensoren die in de afgelopen 90 dagen nooit van status zijn veranderd en geen data hebben geproduceerd. Dit zijn kandidaten voor verwijdering.</p>
+
+                <p>Let ook op apparaten in de "paused"-staat. Sensoren op een gepauzeerd apparaat tellen wel mee voor je licentie maar doen niets. Als het apparaat er al maanden uitstaat: verwijder het.</p>
+
+                <h2>Strategie 4: Auto-discovery templates beperken</h2>
+
+                <p>Bij de volgende auto-discovery of bij het handmatig uitrollen van nieuwe apparaten loont het om een beperkt discovery-template te gebruiken: alleen de sensor-types die je echt nodig hebt. Standaard PRTG-templates zijn bewust breed; ze voegen alles toe zodat je niets mist. Voor een beheerde omgeving is dat te ruim.</p>
+
+                <p>Maak per apparaattype (Windows server, Linux server, managed switch, firewall) een eigen template met alleen de sensoren die je in de praktijk gebruikt. Dit voorkomt dat de teller na elke uitrol direct weer oploopt.</p>
+
+                <h2>Hoeveel kun je besparen?</h2>
+
+                <p>In de meeste PRTG-installaties ouder dan drie jaar zit 20 tot 40 procent overhead in de sensor-teller. Bij een installatie van 1100 sensoren op een 2500-tier is het realistisch om terug te gaan naar 900, wat de 1000-tier mogelijk maakt. Dat scheelt fors in licentiekosten, structureel, elk jaar opnieuw.</p>
+
+                <p>De tijdsinvestering voor een grondige audit ligt doorgaans op een halve tot één werkdag, afhankelijk van de omvang. Het terugverdienmoment is bij een tredestap neerwaarts bijna altijd binnen een jaar.</p>
+
+                <h2>Zelf doen of laten doen?</h2>
+
+                <p>Zelf beginnen? Exporteer je volledige sensor-inventarisatie in één keer als CSV. Open de volgende URL in je browser (vervang server, gebruikersnaam en wachtwoord door jouw eigen gegevens):</p>
+
+                <div class="code-block">
+                    <pre><code>https://jouw-prtg-server/api/table.csv?content=sensors
+  &columns=objid,group,device,sensor,type,status,lastcheck,lastdown,uptime
+  &count=5000
+  &username=jouw-gebruikersnaam
+  &passhash=jouw-passhash</code></pre>
+                </div>
+
+                <p>Open het gedownloade bestand in Excel of Google Sheets en sorteer op de kolom <strong>Last Down (RAW)</strong>. Sensoren zonder waarde in die kolom zijn nooit down geweest. Dat klinkt goed, maar het is juist de vraag waard: monitort deze sensor iets wat er echt toe doet, of staat hij er al jaren bij zonder ooit iets te signaleren?</p>
+
+                <p>Wees kritisch op alles wat nog nooit een alert heeft gegenereerd. Niet alles moet weg, maar elke sensor verdient een reden om te blijven.</p>
+
+                <h3>Twee patronen die je snel veel sensoren schelen</h3>
+
+                <p><strong>Bandbreedte per VM.</strong> Netwerksensoren op individuele virtuele machines zijn zelden nuttig: de VM ziet alleen zijn eigen virtuele adapter, niet de werkelijke belasting van de fysieke uplink. Monitoringwaarde is laag, sensorkosten zijn hoog. Deze kun je doorgaans zonder verlies verwijderen.</p>
+
+                <p><strong>Switches als losse sensoren.</strong> Eén SNMP Traffic sensor per switch-poort levert evenveel data als tientallen losse sensoren, maar telt als één sensor waarbij elke poort een kanaal is. Als je nu losse sensoren per interface hebt staan, is omzetten naar een multi-channel SNMP-sensor direct de grootste winst in je sensor-teller.</p>
+
+                <p>Wil je een complete analyse met concrete aanbevelingen? Re-Scan Monitor Solutions biedt een gerichte sensor audit: een volledige inventarisatie van je setup, consolidatiemogelijkheden per apparaat en categorie, en een actieplan op maat.</p>
+
+                <div class="article-cta">
+                    <h3>PRTG te duur geworden?</h3>
+                    <p>Een sensor audit brengt de overbodige sensoren in kaart en geeft concreet advies om je licentietier te verlagen, zonder monitorcoverage te verliezen.</p>
+                    <a href="mailto:contact@re-scan.nl?subject=Sensor Audit aanvraag" class="btn btn-primary">
+                        Vraag een Sensor Audit aan
+                    </a>
+                </div>
+            </div>
+
+            <!-- Article sidebar -->
+            <aside class="article-sidebar">
+                <div class="sidebar-box">
+                    <h3>Over de Auteur</h3>
+                    <p><strong>Thomas Faddegon</strong> helpt organisaties met het optimaliseren van PRTG-installaties, van sensor consolidatie tot volledige monitoring-strategieën.</p>
+                </div>
+
+                <div class="sidebar-box">
+                    <h3>Gerelateerde Artikelen</h3>
+                    <ul>
+                        <li><a href="monitoring-alerting-optimaliseren-spam-nuttige-notificaties.html">Alert Optimalisatie: van spam naar nuttige notificaties</a></li>
+                        <li><a href="jsonpath-rest-custom-v2-sensor-handleiding.html">JSONPath in PRTG REST Custom v2 Sensor</a></li>
+                        <li><a href="wmi-gebruikersrechten-verantwoorde-manier.html">WMI Gebruikersrechten op een Verantwoorde Manier</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-box">
+                    <h3>Hulp Nodig?</h3>
+                    <p>Te veel sensoren, te hoge kosten? Re-Scan Monitor Solutions helpt je de sensor-teller structureel omlaag te brengen.</p>
+                    <a href="mailto:contact@re-scan.nl?subject=Sensor Audit aanvraag" class="btn btn-outline btn-small">Vraag een Audit aan</a>
+                </div>
+            </aside>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer-kiss">
+        <div class="container-kiss">
+            <p>Copyright &copy; 2026 Re-Scan Monitor Solutions - KvK: 94485976 | <a href="../blog/">Blog</a> | <a href="../">Home</a></p>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

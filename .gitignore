@@ -27,4 +27,13 @@ package-lock.json
 *.temp
 
 # Claude Code files
+.claude/
 CLAUDE.md
+
+# Backup files
+*.backup
+*.bak
+
+# Internal working documents
+CONTENT-REVIEW.md
+DEPLOYMENT.md
