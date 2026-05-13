@@ -2,14 +2,13 @@
 
 /* KISS Mode Blog Styling */
 .blog-header-kiss {
-    background: white;
-    border-bottom: 1px solid #e5e7eb;
+    background: linear-gradient(135deg, var(--navy) 0%, var(--dark-green) 100%);
     padding: 1.5rem 0;
     text-align: center;
 }
 
 .brand-link-kiss {
-    color: var(--navy);
+    color: white;
     text-decoration: none;
     font-weight: 700;
     font-size: 1.125rem;
@@ -17,7 +16,7 @@
 }
 
 .brand-link-kiss:hover {
-    color: var(--primary-green);
+    color: var(--navy);
 }
 
 .blog-hero-kiss {
