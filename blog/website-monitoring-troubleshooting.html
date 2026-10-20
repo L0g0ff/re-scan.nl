@@ -7,14 +7,11 @@
     <meta name="description" content="Leer hoe je effectief websites monitort met PRTG HTTP Advanced sensoren. Ontdek problemen voordat klanten ze merken en los storingen snel op.">
     <meta name="author" content="Thomas">
     <meta name="keywords" content="website monitoring, PRTG, HTTP Advanced sensor, website troubleshooting, uptime monitoring, webservice monitoring">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/blog.css">
     <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
-    
+
     <!-- Schema.org structured data -->
     <script type="application/ld+json">
     {
@@ -39,14 +36,33 @@
         }
     }
     </script>
+    <link rel="canonical" href="https://www.re-scan.nl/blog/website-monitoring-troubleshooting.html">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="nl_NL">
+    <meta property="og:site_name" content="Re-Scan Monitor Solutions">
+    <meta property="og:title" content="Website Monitoring en Troubleshooting met PRTG - Re-Scan Monitor Solutions">
+    <meta property="og:description" content="Leer hoe je effectief websites monitort met PRTG HTTP Advanced sensoren. Ontdek problemen voordat klanten ze merken en los storingen snel op.">
+    <meta property="og:url" content="https://www.re-scan.nl/blog/website-monitoring-troubleshooting.html">
+    <meta name="theme-color" content="#f8faf7">
 </head>
 <body class="kiss-mode">
-    <!-- Simple Header -->
-    <header class="blog-header-kiss">
-        <div class="container-kiss">
-            <a href="../" class="brand-link-kiss">Re-Scan Monitor Solutions</a>
+    <a class="skip-link" href="#inhoud">Direct naar inhoud</a>
+    <header class="site-header">
+        <div class="container-kiss header-inner">
+            <a class="brand" href="../" aria-label="Re-Scan Monitor Solutions, home">
+                <span class="brand-mark" aria-hidden="true"></span>
+                <span>Re-Scan<span class="brand-caption">Monitor Solutions</span></span>
+            </a>
+            <nav class="site-nav" aria-label="Hoofdnavigatie">
+                <a href="../#diensten">Diensten</a>
+                <a href="../#tarieven">Tarieven</a>
+                <a href="./" aria-current="true">Kennisbank</a>
+                <a class="nav-contact" href="../#contact">Contact <span aria-hidden="true">↗</span></a>
+            </nav>
         </div>
     </header>
+
+    <main id="inhoud">
 
     <!-- Article Header -->
     <section class="article-header-kiss">
@@ -64,9 +80,9 @@
         <div class="container-kiss">
             <div class="article-body">
                 <div class="article-image">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop" 
-                         alt="Website monitoring dashboard met grafieken" 
-                         loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=400&fit=crop"
+                         alt="Website monitoring dashboard met grafieken"
+                         loading="lazy" width="800" height="400" decoding="async">
                 </div>
 
                 <p class="lead">Door gebruik te maken van een "HTTP Advanced" sensor in PRTG, kun je effectief een website monitoren. Deze sensor controleert niet alleen de beschikbaarheid van de site, maar ook of de verwachte content daadwerkelijk wordt teruggegeven.</p>
@@ -81,15 +97,15 @@
                 </ol>
 
                 <div class="article-image">
-                    <img src="../images/blog/image-1024x310.png" 
-                         alt="PRTG HTTP Advanced sensor configuratie stap 1" 
-                         loading="lazy">
+                    <img src="../images/blog/image-1024x310.png"
+                         alt="PRTG HTTP Advanced sensor configuratie stap 1"
+                         loading="lazy" width="1024" height="310" decoding="async">
                 </div>
 
                 <div class="article-image">
-                    <img src="../images/blog/image-1-1024x384.png" 
-                         alt="PRTG HTTP Advanced sensor configuratie stap 2" 
-                         loading="lazy">
+                    <img src="../images/blog/image-1-1024x384.png"
+                         alt="PRTG HTTP Advanced sensor configuratie stap 2"
+                         loading="lazy" width="1024" height="384" decoding="async">
                 </div>
 
                 <p>De status van de website wordt vervolgens automatisch elke 5 minuten gecontroleerd.</p>
@@ -98,9 +114,9 @@
                 <p>Door een website actief te monitoren, kun je potentiële knelpunten identificeren. Zie bijvoorbeeld onderstaande grafiek.</p>
 
                 <div class="article-image">
-                    <img src="../images/blog/image-3-1024x519.png" 
-                         alt="Website monitoring grafiek met downtime patronen" 
-                         loading="lazy">
+                    <img src="../images/blog/image-3-1024x519.png"
+                         alt="Website monitoring grafiek met downtime patronen"
+                         loading="lazy" width="1024" height="519" decoding="async">
                 </div>
 
                 <p>Zoals je hier kunt zien, gaat de website elke avond rond dezelfde tijd voor langere periodes offline. Zonder monitoring zou je dit waarschijnlijk pas veel later hebben ontdekt. Klanten zullen je niet informeren wanneer een website niet werkt; in plaats daarvan zoeken ze gewoon naar een alternatief.</p>
@@ -109,9 +125,9 @@
                 <p>In de PRTG-log kun je de oorzaak achterhalen waarom de pagina offline is gegaan. In dit voorbeeld betreft het een interne 500-fout.</p>
 
                 <div class="article-image">
-                    <img src="../images/blog/image-4-1024x253.png" 
-                         alt="PRTG log met interne 500-fout" 
-                         loading="lazy">
+                    <img src="../images/blog/image-4-1024x253.png"
+                         alt="PRTG log met interne 500-fout"
+                         loading="lazy" width="1024" height="253" decoding="async">
                 </div>
 
                 <p>Om de oorzaak van de interne 500-fout te achterhalen, moet je de logbestanden van je webapplicatie nakijken. Dit verschilt per oplossing. In dit geval zal ik de logging moeten downloaden van de webserver waarop de website draait.</p>
@@ -122,17 +138,17 @@
                 <p>Begin (01.12):</p>
 
                 <div class="article-image">
-                    <img src="../images/blog/image-8-1024x54.png" 
-                         alt="Webserver log begin cronjob 01:12" 
-                         loading="lazy">
+                    <img src="../images/blog/image-8-1024x54.png"
+                         alt="Webserver log begin cronjob 01:12"
+                         loading="lazy" width="1024" height="54" decoding="async">
                 </div>
 
                 <p>En het einde (03.42)</p>
 
                 <div class="article-image">
-                    <img src="../images/blog/image-11-1024x50.png" 
-                         alt="Webserver log einde cronjob 03:42" 
-                         loading="lazy">
+                    <img src="../images/blog/image-11-1024x50.png"
+                         alt="Webserver log einde cronjob 03:42"
+                         loading="lazy" width="1024" height="50" decoding="async">
                 </div>
 
                 <p>In dit geval bleek de oorzaak een WordPress-backupplugin te zijn. Het uitschakelen van de plugin en overstappen naar een betere back-upoplossing was de oplossing.</p>
@@ -187,13 +203,15 @@
         </div>
     </article>
 
+    </main>
+
     <!-- Footer -->
     <footer class="footer-kiss">
-        <div class="container-kiss">
-            <p>Copyright &copy; 2026 Re-Scan Monitor Solutions - KvK: 94485976 | <a href="../blog/">Blog</a> | <a href="../">Home</a></p>
+        <div class="container-kiss footer-inner">
+            <p>© 2026 Re-Scan Monitor Solutions <span class="footer-divider">/</span> KvK 94485976</p>
+            <p><a href="../">Home</a> · <a href="./">Kennisbank</a></p>
         </div>
     </footer>
 
-    <script src="../js/script.js"></script>
 </body>
 </html>

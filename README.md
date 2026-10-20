@@ -1,77 +1,68 @@
-# Re-Scan Monitor Solutions Website
+# Re-Scan Monitor Solutions
 
-Modern static website for Re-Scan monitoring solutions, built with HTML, CSS, and JavaScript for GitHub Pages deployment.
+Statische Nederlandstalige website voor PRTG-monitoring, consultancy, hosting en training.
+HTML en CSS, zonder buildstap, runtime-JavaScript of externe lettertypen.
 
-## Features
+## Lokaal bekijken
 
-- **Responsive Design**: Optimized for all devices (mobile, tablet, desktop)
-- **Modern UI**: Clean, professional design with smooth animations
-- **Fast Loading**: Optimized static files with efficient CSS and JavaScript
-- **SEO Friendly**: Semantic HTML structure and meta tags
-- **Contact Form**: Functional contact form with validation
-- **FAQ Section**: Interactive accordion-style FAQ
-- **Pricing Cards**: Clear pricing presentation
-- **Smooth Scrolling**: Enhanced navigation experience
+Start vanuit deze map:
 
-## Structure
-
-```
-├── index.html          # Main webpage
-├── css/
-│   └── style.css       # Stylesheet with modern design
-├── js/
-│   └── script.js       # Interactive functionality
-├── images/             # Image assets directory
-│   └── .gitkeep       # Images placeholder
-└── README.md          # This file
+```sh
+python3 -m http.server 8765 --bind 127.0.0.1
 ```
 
-## Setup for GitHub Pages
+Open `http://127.0.0.1:8765`. Stop de server met Ctrl+C.
 
-1. Push this repository to GitHub
-2. Go to repository Settings → Pages
-3. Select "Deploy from a branch"
-4. Choose "main" branch and "/ (root)" folder
-5. Save and wait for deployment
+## Structuur
 
-## Customization
+- `index.html`: homepage, diensten, tarieven, kennisbankselectie en contact.
+- `blog/`: overzicht en twaalf artikelen met bestaande URL's.
+- `css/style.css`: gedeelde opmaak en de monitoringanimatie.
+- `css/blog.css`: leeskolom, artikeloverzicht, zijbalk en codeblokken.
+- `images/`: favicon, screenshots en lokaal opgeslagen klantlogo's. Herkomst van de logo's staat in `images/clients/SOURCES.md`.
+- `404.html`: foutpagina met absolute links voor ontbrekende URL's.
+- `sitemap.xml`, `robots.txt`, `CNAME`, `_config.yml`: vindbaarheid en hostingconfiguratie.
+- `DESIGN.md`: afspraken voor vormgeving en KISS.
+- `scripts/check_site.py`: controle zonder aanvullende dependencies.
 
-### Adding Images
-- Add your logo as `images/logo.png` (recommended: 200x80px)
-- Add favicon as `images/favicon.ico` (16x16px)
-- Replace image paths in HTML as needed
+## Onderhoud en controles
 
-### Updating Content
-- Edit `index.html` to modify text content
-- Update contact information in the contact section
-- Modify pricing plans and features as needed
+```sh
+python3 scripts/check_site.py
+git diff --check
+```
 
-### Styling
-- Primary color: `#54B435` (green)
-- Secondary color: `#379237` (dark green)  
-- Navy: `#0F172A`
-- All colors can be modified in CSS custom properties (`:root` section)
+De controle valideert lokale links, ankers, paginahoofdstructuur, canonical-URL's,
+Open Graph-URL's, JSON-LD, afbeeldingsafmetingen en de sitemap.
+Controleer visuele wijzigingen daarnaast in een browser op mobiel, tablet en desktop.
+Test toetsenbordbediening, lange codeblokken en de instelling voor minder beweging.
 
-### Contact Form
-The contact form includes client-side validation. For production use, you'll need to:
-1. Set up a backend service to handle form submissions
-2. Update the form action attribute
-3. Or integrate with services like Formspree, Netlify Forms, etc.
+De monitoringillustratie op de homepage is een SVG met één CSS-animatie van vier
+seconden. Daarna blijft deze stilstaan. Bij `prefers-reduced-motion: reduce` verschijnt
+de eindstand direct. Het is een illustratie, geen live beschikbaarheidsmeting.
+Alle navigatie en contactlinks functioneren zonder JavaScript.
 
-## Browser Support
+De kop wisselt met een CSS-animatie elke vier seconden van woord, in een cyclus
+van 28 seconden. Met 'Tekst stilzetten' pauzeer je het wisselen. Bij minder
+beweging blijft 'eindgebruiker' staan. De tekst voor screenreaders blijft stabiel.
 
-- Modern browsers (Chrome, Firefox, Safari, Edge)
-- Mobile browsers (iOS Safari, Chrome Mobile)
-- Progressive enhancement for older browsers
+De gedeelde header en footer staan rechtstreeks in de HTML-documenten. Pas die
+bij wijzigingen consequent aan. Kleuren en breedte staan in `:root` in `css/style.css`.
+Tarieven staan op de homepage; publicatie- en wijzigingsdatums van artikelen staan
+in de JSON-LD. Werk sitemapdatums bij wanneer een pagina daadwerkelijk verandert.
 
-## Performance
+Contact werkt via `mailto:` en `tel:`. Er is geen contactformulier of formulierbackend.
+Blogartikelen bevatten deels externe Unsplash-afbeeldingen; de homepage doet geen
+externe assetverzoeken. Lokale linkcontroles verifiëren geen externe afbeeldingen.
 
-- Optimized CSS with modern techniques
-- Efficient JavaScript with event delegation
-- Lazy loading for images
-- Smooth animations with GPU acceleration
-- Minimal external dependencies (only Google Fonts)
+## Hosting
 
-## License
+De repository is ingericht voor GitHub Pages met `www.re-scan.nl` als eigen domein.
+Lokaal werken publiceert niets. Een push of wijziging aan hosting vereist een
+afzonderlijke opdracht.
 
-© 2024 Re-Scan Monitor Solutions. All rights reserved.
+`_redirects` bevat oude WordPress-migratieregels. Dit bestand wordt niet door de
+lokale Python-server uitgevoerd. Controleer vóór publicatie op de daadwerkelijke
+hosting of de oude URL's correct doorverwijzen; een aanwezig bestand bewijst dat niet.
+
+© 2026 Re-Scan Monitor Solutions.

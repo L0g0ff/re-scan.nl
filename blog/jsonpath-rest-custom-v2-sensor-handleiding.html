@@ -7,9 +7,6 @@
     <meta name="description" content="Leer JSONPath gebruiken in PRTG REST Custom v2 sensors. Van basis JSON parsing tot geavanceerde filtering en aggregatie. Inclusief praktische voorbeelden.">
     <meta name="author" content="Thomas">
     <meta name="keywords" content="PRTG JSONPath, REST Custom v2 sensor, JSON API monitoring, PRTG API sensor, JSONPath filtering, PRTG sensor configuratie">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/blog.css">
     <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
@@ -39,14 +36,33 @@
         }
     }
     </script>
+    <link rel="canonical" href="https://www.re-scan.nl/blog/jsonpath-rest-custom-v2-sensor-handleiding.html">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="nl_NL">
+    <meta property="og:site_name" content="Re-Scan Monitor Solutions">
+    <meta property="og:title" content="JSONPath in PRTG REST Custom v2 Sensor: Complete Handleiding | Re-Scan Monitor Solutions">
+    <meta property="og:description" content="Leer JSONPath gebruiken in PRTG REST Custom v2 sensors. Van basis JSON parsing tot geavanceerde filtering en aggregatie. Inclusief praktische voorbeelden.">
+    <meta property="og:url" content="https://www.re-scan.nl/blog/jsonpath-rest-custom-v2-sensor-handleiding.html">
+    <meta name="theme-color" content="#f8faf7">
 </head>
 <body class="kiss-mode">
-    <!-- Simple Header -->
-    <header class="blog-header-kiss">
-        <div class="container-kiss">
-            <a href="../" class="brand-link-kiss">Re-Scan Monitor Solutions</a>
+    <a class="skip-link" href="#inhoud">Direct naar inhoud</a>
+    <header class="site-header">
+        <div class="container-kiss header-inner">
+            <a class="brand" href="../" aria-label="Re-Scan Monitor Solutions, home">
+                <span class="brand-mark" aria-hidden="true"></span>
+                <span>Re-Scan<span class="brand-caption">Monitor Solutions</span></span>
+            </a>
+            <nav class="site-nav" aria-label="Hoofdnavigatie">
+                <a href="../#diensten">Diensten</a>
+                <a href="../#tarieven">Tarieven</a>
+                <a href="./" aria-current="true">Kennisbank</a>
+                <a class="nav-contact" href="../#contact">Contact <span aria-hidden="true">↗</span></a>
+            </nav>
         </div>
     </header>
+
+    <main id="inhoud">
 
     <!-- Article Header -->
     <section class="article-header-kiss">
@@ -67,7 +83,7 @@
                 <div class="article-image">
                     <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=400&fit=crop"
                          alt="JSON API monitoring met PRTG"
-                         loading="lazy">
+                         loading="lazy" width="800" height="400" decoding="async">
                 </div>
 
                 <p class="lead">De REST Custom v2 sensor is een native PRTG sensor waarmee je zonder custom scripts APIs kunt monitoren via JSONPath queries. Deze handleiding laat zien hoe je JSON data effectief parsed en monitort.</p>
@@ -77,7 +93,7 @@
 
                 <h2>JSONPath Basis Syntax</h2>
                 <div class="code-block">
-                    <pre><code>$                  Root object
+                    <pre tabindex="0" role="region" aria-label="Codevoorbeeld"><code>$                  Root object
 $.property         Child property
 $.array[0]         Array element op index 0
 [?(@.x > 5)]       Filter expressie
@@ -92,7 +108,7 @@ length($.array)    Tel array elementen
                 <p>API: <code>https://status.monday.com/api/v2/summary.json</code></p>
 
                 <div class="code-block">
-                    <pre><code>{
+                    <pre tabindex="0" role="region" aria-label="Codevoorbeeld"><code>{
   "status": {
     "indicator": "none",
     "description": "All Systems Operational"
@@ -117,7 +133,7 @@ length($.array)    Tel array elementen
 
                 <h3>Sensor Configuratie</h3>
                 <div class="code-block">
-                    <pre><code>Request URL: https://status.monday.com/api/v2/summary.json
+                    <pre tabindex="0" role="region" aria-label="Codevoorbeeld"><code>Request URL: https://status.monday.com/api/v2/summary.json
 Request Method: GET
 Authentication: None</code></pre>
                 </div>
@@ -126,7 +142,7 @@ Authentication: None</code></pre>
 
                 <h4>Channel 1: Tel Niet-Operationele EU Componenten</h4>
                 <div class="code-block">
-                    <pre><code>JSONPath: length($.components[?(@.group_id == 'qxcz5495fl3r' && @.status != 'operational')])
+                    <pre tabindex="0" role="region" aria-label="Codevoorbeeld"><code>JSONPath: length($.components[?(@.group_id == 'qxcz5495fl3r' && @.status != 'operational')])
 Value Type: Absolute (integer)
 Upper Error Limit: 1</code></pre>
                 </div>
@@ -134,19 +150,19 @@ Upper Error Limit: 1</code></pre>
 
                 <h4>Channel 2: Actieve Incidents</h4>
                 <div class="code-block">
-                    <pre><code>JSONPath: length($.incidents)
+                    <pre tabindex="0" role="region" aria-label="Codevoorbeeld"><code>JSONPath: length($.incidents)
 Value Type: Absolute (integer)</code></pre>
                 </div>
 
                 <h4>Channel 3: Overall Status</h4>
                 <div class="code-block">
-                    <pre><code>JSONPath: $.status.indicator
+                    <pre tabindex="0" role="region" aria-label="Codevoorbeeld"><code>JSONPath: $.status.indicator
 Value Type: Status (string)</code></pre>
                 </div>
 
                 <h4>Channel 4: EU Platform Status</h4>
                 <div class="code-block">
-                    <pre><code>JSONPath: $.components[?(@.group_id == 'qxcz5495fl3r' && @.name == 'Platform')].status
+                    <pre tabindex="0" role="region" aria-label="Codevoorbeeld"><code>JSONPath: $.components[?(@.group_id == 'qxcz5495fl3r' && @.name == 'Platform')].status
 Value Type: Status (string)</code></pre>
                 </div>
                 <p>PRTG haalt automatisch de eerste waarde uit het gefilterde resultaat.</p>
@@ -164,7 +180,7 @@ Value Type: Status (string)</code></pre>
                 <h2>Array Indexing: Direct vs. Na Filter</h2>
                 <p><strong>Belangrijk verschil:</strong> [0] mag WEL bij directe array indexing, maar NIET na een filter expressie.</p>
                 <div class="code-block">
-                    <pre><code>GOED - Directe array index (zonder filter):
+                    <pre tabindex="0" role="region" aria-label="Codevoorbeeld"><code>GOED - Directe array index (zonder filter):
 $.servers[0].status
 $.users[5].name
 
@@ -181,7 +197,7 @@ $.components[?(@.status == 'down')][0].name</code></pre>
 
                 <h3>Filtering met Meerdere Condities</h3>
                 <div class="code-block">
-                    <pre><code>// AND
+                    <pre tabindex="0" role="region" aria-label="Codevoorbeeld"><code>// AND
 $.users[?(@.active == true && @.role == 'admin')]
 
 // OR
@@ -193,7 +209,7 @@ $.metrics[?(@.cpu_usage > 80)]</code></pre>
 
                 <h3>Nested Structuren</h3>
                 <div class="code-block">
-                    <pre><code>// Direct indexing
+                    <pre tabindex="0" role="region" aria-label="Codevoorbeeld"><code>// Direct indexing
 $.users[0].permissions[0].level
 
 // Filter in nested array
@@ -202,7 +218,7 @@ $.departments[?(@.name == 'IT')].employees.salary</code></pre>
 
                 <h3>Handige Functies</h3>
                 <div class="code-block">
-                    <pre><code>// Tel items
+                    <pre tabindex="0" role="region" aria-label="Codevoorbeeld"><code>// Tel items
 length($.errors)
 
 // Fallback waarde
@@ -275,10 +291,13 @@ $.optional_field || 0</code></pre>
         </div>
     </article>
 
+    </main>
+
     <!-- Footer -->
     <footer class="footer-kiss">
-        <div class="container-kiss">
-            <p>Copyright &copy; 2026 Re-Scan Monitor Solutions - KvK: 94485976 | <a href="../blog/">Blog</a> | <a href="../">Home</a></p>
+        <div class="container-kiss footer-inner">
+            <p>© 2026 Re-Scan Monitor Solutions <span class="footer-divider">/</span> KvK 94485976</p>
+            <p><a href="../">Home</a> · <a href="./">Kennisbank</a></p>
         </div>
     </footer>
 </body>

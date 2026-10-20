@@ -5,29 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 - Pagina niet gevonden | Re-Scan Monitor Solutions</title>
     <meta name="description" content="De pagina die je zoekt bestaat niet. Ga terug naar de homepage van Re-Scan Monitor Solutions.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <meta name="robots" content="noindex">
+    <meta name="theme-color" content="#f8faf7">
 </head>
-<body class="kiss-mode">
+<body class="kiss-mode error-page">
+    <a class="skip-link" href="#inhoud">Direct naar inhoud</a>
+    <header class="site-header">
+        <div class="container-kiss header-inner">
+            <a class="brand" href="/" aria-label="Re-Scan Monitor Solutions, home">
+                <span class="brand-mark" aria-hidden="true"></span>
+                <span>Re-Scan<span class="brand-caption">Monitor Solutions</span></span>
+            </a>
+            <nav class="site-nav" aria-label="Hoofdnavigatie">
+                <a href="/#diensten">Diensten</a>
+                <a href="/#tarieven">Tarieven</a>
+                <a href="/blog/" >Kennisbank</a>
+                <a class="nav-contact" href="/#contact">Contact <span aria-hidden="true">↗</span></a>
+            </nav>
+        </div>
+    </header>
+    <main id="inhoud">
 
     <!-- 404 Section -->
     <section class="hero-kiss">
         <div class="container-kiss">
-            <h1 class="problem">404<br>Dit gebeurt er als je niet actief monitort.</h1>
-            <p class="solution">Dat moet anders.</p>
+            <p class="eyebrow">404 / Pagina niet gevonden</p>
+            <h1>Even de weg kwijt?</h1>
+            <p class="solution">Deze pagina bestaat niet of is verplaatst.<br>Via de homepage of kennisbank helpen we je verder.</p>
             <div class="cta-primary">
-                <a href="/" class="btn-kiss btn-kiss-primary">Naar Home</a>
-                <a href="/blog/" class="btn-kiss btn-kiss-secondary">Naar Blog</a>
+                <a href="/" class="btn-kiss btn-kiss-primary">Naar de homepage</a>
+                <a href="/blog/" class="btn-kiss btn-kiss-secondary">Naar de kennisbank</a>
             </div>
         </div>
     </section>
 
     <!-- Contact -->
-    <section class="contact-kiss">
+    <section class="contact-kiss section-space">
         <div class="container-kiss">
             <h2>Direct contact</h2>
             <div class="contact-info-kiss">
@@ -47,10 +63,13 @@
         </div>
     </section>
 
+    </main>
+
     <!-- Minimal Footer -->
     <footer class="footer-kiss">
-        <div class="container-kiss">
-            <p>Re-Scan Monitor Solutions | KvK: 94485976 | Thomas Faddegon | <a href="/blog/">Blog</a></p>
+        <div class="container-kiss footer-inner">
+            <p>© 2026 Re-Scan Monitor Solutions <span class="footer-divider">/</span> KvK 94485976</p>
+            <p><a href="/">Home</a> · <a href="/blog/">Kennisbank</a></p>
         </div>
     </footer>
 

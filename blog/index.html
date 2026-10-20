@@ -3,17 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - Re-Scan Monitor Solutions | Monitoring Tips & Insights</title>
+    <title>Kennisbank | Re-Scan Monitor Solutions</title>
     <meta name="description" content="Ontdek de nieuwste trends, tips en best practices over network monitoring, PRTG en IT infrastructuur van de experts van Re-Scan Monitor Solutions.">
     <meta name="keywords" content="monitoring blog, PRTG tips, network monitoring, IT infrastructuur, monitoring best practices">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/blog.css">
     <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
-    
+
     <!-- Schema.org structured data -->
     <script type="application/ld+json">
     {
@@ -29,20 +26,39 @@
         }
     }
     </script>
+    <link rel="canonical" href="https://www.re-scan.nl/blog/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="nl_NL">
+    <meta property="og:site_name" content="Re-Scan Monitor Solutions">
+    <meta property="og:title" content="Kennisbank | Re-Scan Monitor Solutions">
+    <meta property="og:description" content="Ontdek de nieuwste trends, tips en best practices over network monitoring, PRTG en IT infrastructuur van de experts van Re-Scan Monitor Solutions.">
+    <meta property="og:url" content="https://www.re-scan.nl/blog/">
+    <meta name="theme-color" content="#f8faf7">
 </head>
 <body class="kiss-mode">
-    <!-- Simple Header -->
-    <header class="blog-header-kiss">
-        <div class="container-kiss">
-            <a href="../" class="brand-link-kiss">Re-Scan Monitor Solutions</a>
+    <a class="skip-link" href="#inhoud">Direct naar inhoud</a>
+    <header class="site-header">
+        <div class="container-kiss header-inner">
+            <a class="brand" href="../" aria-label="Re-Scan Monitor Solutions, home">
+                <span class="brand-mark" aria-hidden="true"></span>
+                <span>Re-Scan<span class="brand-caption">Monitor Solutions</span></span>
+            </a>
+            <nav class="site-nav" aria-label="Hoofdnavigatie">
+                <a href="../#diensten">Diensten</a>
+                <a href="../#tarieven">Tarieven</a>
+                <a href="./" aria-current="page">Kennisbank</a>
+                <a class="nav-contact" href="../#contact">Contact <span aria-hidden="true">↗</span></a>
+            </nav>
         </div>
     </header>
+
+    <main id="inhoud">
 
     <!-- Blog Hero -->
     <section class="blog-hero-kiss">
         <div class="container-kiss">
-            <h1>Blog & Insights</h1>
-            <p>PRTG monitoring tips en praktische handleidingen</p>
+            <h1>Kennis uit de praktijk.</h1>
+            <p>PRTG-tips en praktische handleidingen. Om zelf mee aan de slag te gaan.</p>
         </div>
     </section>
 
@@ -53,7 +69,7 @@
                 <article class="blog-post-card">
                     <div class="blog-post-image">
                         <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&h=200&fit=crop"
-                             alt="Rekenmachine en factuur - PRTG licentiekosten verlagen" loading="lazy">
+                             alt="Rekenmachine en factuur - PRTG licentiekosten verlagen" loading="lazy" width="400" height="200" decoding="async">
                     </div>
                     <div class="blog-post-content">
                         <div class="blog-post-meta">
@@ -63,9 +79,9 @@
                             <span>•</span>
                             <span>6 min leestijd</span>
                         </div>
-                        <h3>
+                        <h2>
                             <a href="prtg-sensoren-consolideren-kosten-besparen.html">PRTG Sensoren Consolideren: Licentiekosten Verlagen Zonder Concessies</a>
-                        </h3>
+                        </h2>
                         <p class="blog-post-excerpt">
                             PRTG te duur geworden? Leer hoe je met sensor consolidatie je licentietier verlaagt zonder monitorcoverage te verliezen. Praktische strategieën en concrete voorbeelden.
                         </p>
@@ -76,7 +92,7 @@
                 <article class="blog-post-card">
                     <div class="blog-post-image">
                         <img src="../images/blog/teams-alerts/teams-5.png"
-                             alt="Microsoft Teams webhook aanmaken voor PRTG" loading="lazy">
+                             alt="Microsoft Teams webhook aanmaken voor PRTG" loading="lazy" width="1541" height="527" decoding="async">
                     </div>
                     <div class="blog-post-content">
                         <div class="blog-post-meta">
@@ -86,9 +102,9 @@
                             <span>•</span>
                             <span>3 min leestijd</span>
                         </div>
-                        <h3>
+                        <h2>
                             <a href="teams-webhook-prtg-notificaties.html">Teams Webhook Aanmaken voor PRTG Notificaties</a>
-                        </h3>
+                        </h2>
                         <p class="blog-post-excerpt">
                             Ontvang PRTG meldingen direct in Microsoft Teams. Stap-voor-stap handleiding voor het aanmaken van een webhook via Workflows en het koppelen aan PRTG notificaties.
                         </p>
@@ -99,7 +115,7 @@
                 <article class="blog-post-card">
                     <div class="blog-post-image">
                         <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&h=200&fit=crop"
-                             alt="JSON API monitoring met PRTG" loading="lazy">
+                             alt="JSON API monitoring met PRTG" loading="lazy" width="400" height="200" decoding="async">
                     </div>
                     <div class="blog-post-content">
                         <div class="blog-post-meta">
@@ -109,9 +125,9 @@
                             <span>•</span>
                             <span>4 min leestijd</span>
                         </div>
-                        <h3>
+                        <h2>
                             <a href="jsonpath-rest-custom-v2-sensor-handleiding.html">JSONPath in PRTG REST Custom v2 Sensor: Complete Handleiding</a>
-                        </h3>
+                        </h2>
                         <p class="blog-post-excerpt">
                             Leer JSONPath gebruiken in PRTG REST Custom v2 sensors. Van basis JSON parsing tot geavanceerde filtering en aggregatie. Inclusief praktische voorbeelden zoals Monday.com status monitoring.
                         </p>
@@ -122,7 +138,7 @@
                 <article class="blog-post-card">
                     <div class="blog-post-image">
                         <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=200&fit=crop"
-                             alt="PRTG monitoring error troubleshooting" loading="lazy">
+                             alt="PRTG monitoring error troubleshooting" loading="lazy" width="400" height="200" decoding="async">
                     </div>
                     <div class="blog-post-content">
                         <div class="blog-post-meta">
@@ -132,9 +148,9 @@
                             <span>•</span>
                             <span>4 min leestijd</span>
                         </div>
-                        <h3>
+                        <h2>
                             <a href="prtg-error-pe206-http-iot-push-receiver-fix.html">PRTG Error PE206 Oplossen: HTTP IoT Push Receiver Fix</a>
-                        </h3>
+                        </h2>
                         <p class="blog-post-excerpt">
                             Stap-voor-stap oplossing voor PRTG error PE206 bij HTTP IoT Push Data Advanced sensors. SSL certificaten fix voor remote probes in slechts 5 minuten.
                         </p>
@@ -144,8 +160,8 @@
 
                 <article class="blog-post-card">
                     <div class="blog-post-image">
-                        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=200&fit=crop" 
-                             alt="AI-assisted web development workspace" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=200&fit=crop"
+                             alt="AI-assisted web development workspace" loading="lazy" width="400" height="200" decoding="async">
                     </div>
                     <div class="blog-post-content">
                         <div class="blog-post-meta">
@@ -155,20 +171,20 @@
                             <span>•</span>
                             <span>8 min leestijd</span>
                         </div>
-                        <h3>
+                        <h2>
                             <a href="wordpress-naar-statisch-met-ai.html">Van WordPress naar Statische Website in 2 Uur - Dankzij AI</a>
-                        </h3>
+                        </h2>
                         <p class="blog-post-excerpt">
                             Ontdek hoe ik mijn WordPress website volledig ombouwde naar moderne statische content in slechts 2 uur, zonder één regel HTML te schrijven. De kracht van AI-assisted development in de praktijk.
                         </p>
                         <a href="wordpress-naar-statisch-met-ai.html" class="blog-post-read-more">Lees meer →</a>
                     </div>
                 </article>
-                
+
                 <article class="blog-post-card">
                     <div class="blog-post-image">
-                        <img src="https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=400&h=200&fit=crop" 
-                             alt="Smartphone met teveel notificaties" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=400&h=200&fit=crop"
+                             alt="Smartphone met teveel notificaties" loading="lazy" width="400" height="200" decoding="async">
                     </div>
                     <div class="blog-post-content">
                         <div class="blog-post-meta">
@@ -178,9 +194,9 @@
                             <span>•</span>
                             <span>5 min leestijd</span>
                         </div>
-                        <h3>
+                        <h2>
                             <a href="monitoring-alerting-optimaliseren-spam-nuttige-notificaties.html">Monitoring alerting optimaliseren: van spam naar nuttige notificaties</a>
-                        </h3>
+                        </h2>
                         <p class="blog-post-excerpt">
                             Leer hoe je monitoring alerts optimaliseert van 50+ meldingen naar 2-3 relevante notificaties per dag. Van reactief naar proactief werken met slimme alerting.
                         </p>
@@ -190,8 +206,8 @@
 
                 <article class="blog-post-card">
                     <div class="blog-post-image">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=200&fit=crop" 
-                             alt="PRTG dashboard interface customization" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=200&fit=crop"
+                             alt="PRTG dashboard interface customization" loading="lazy" width="400" height="200" decoding="async">
                     </div>
                     <div class="blog-post-content">
                         <div class="blog-post-meta">
@@ -201,9 +217,9 @@
                             <span>•</span>
                             <span>4 min leestijd</span>
                         </div>
-                        <h3>
+                        <h2>
                             <a href="eenvoudig-prtg-dashboard-aanpassen-css.html">Eenvoudig PRTG Dashboard Aanpassen met CSS</a>
-                        </h3>
+                        </h2>
                         <p class="blog-post-excerpt">
                             Leer hoe je je PRTG dashboard eenvoudig aanpast met CSS om acknowledged meldingen te filteren. Een simpele truc voor een overzichtelijker monitoring interface.
                         </p>
@@ -213,8 +229,8 @@
 
                 <article class="blog-post-card">
                     <div class="blog-post-image">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=200&fit=crop" 
-                             alt="Website monitoring dashboard met grafieken" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=200&fit=crop"
+                             alt="Website monitoring dashboard met grafieken" loading="lazy" width="400" height="200" decoding="async">
                     </div>
                     <div class="blog-post-content">
                         <div class="blog-post-meta">
@@ -224,9 +240,9 @@
                             <span>•</span>
                             <span>6 min leestijd</span>
                         </div>
-                        <h3>
+                        <h2>
                             <a href="website-monitoring-troubleshooting.html">Website Monitoring en Troubleshooting met PRTG</a>
-                        </h3>
+                        </h2>
                         <p class="blog-post-excerpt">
                             Leer hoe je effectief websites monitort met PRTG HTTP Advanced sensoren. Ontdek problemen voordat klanten ze merken en los storingen snel op.
                         </p>
@@ -236,8 +252,8 @@
 
                 <article class="blog-post-card">
                     <div class="blog-post-image">
-                        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=200&fit=crop" 
-                             alt="Windows security management" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=200&fit=crop"
+                             alt="Windows security management" loading="lazy" width="400" height="200" decoding="async">
                     </div>
                     <div class="blog-post-content">
                         <div class="blog-post-meta">
@@ -247,9 +263,9 @@
                             <span>•</span>
                             <span>5 min leestijd</span>
                         </div>
-                        <h3>
+                        <h2>
                             <a href="wmi-gebruikersrechten-verantwoorde-manier.html">WMI Gebruikersrechten op een Verantwoorde Manier</a>
-                        </h3>
+                        </h2>
                         <p class="blog-post-excerpt">
                             Leer hoe je WMI gebruikersrechten veilig configureert voor PRTG monitoring volgens het Zero Trust principe. Praktische stappen en best practices.
                         </p>
@@ -259,8 +275,8 @@
 
                 <article class="blog-post-card">
                     <div class="blog-post-image">
-                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=400&h=200&fit=crop" 
-                             alt="IT monitoring compliance dashboard" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=400&h=200&fit=crop"
+                             alt="IT monitoring compliance dashboard" loading="lazy" width="400" height="200" decoding="async">
                     </div>
                     <div class="blog-post-content">
                         <div class="blog-post-meta">
@@ -270,9 +286,9 @@
                             <span>•</span>
                             <span>8 min leestijd</span>
                         </div>
-                        <h3>
+                        <h2>
                             <a href="normenkader-ibp-monitor-omgeving.html">Hoe het vernieuwde Normenkader IBP te integreren in je monitor omgeving</a>
-                        </h3>
+                        </h2>
                         <p class="blog-post-excerpt">
                             Praktische gids voor het implementeren van het IBP Normenkader met PRTG monitoring. Van configuratiemanagement tot incidentmanagement.
                         </p>
@@ -282,8 +298,8 @@
 
                 <article class="blog-post-card">
                     <div class="blog-post-image">
-                        <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=400&h=200&fit=crop" 
-                             alt="School cybersecurity" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=400&h=200&fit=crop"
+                             alt="School cybersecurity" loading="lazy" width="400" height="200" decoding="async">
                     </div>
                     <div class="blog-post-content">
                         <div class="blog-post-meta">
@@ -293,9 +309,9 @@
                             <span>•</span>
                             <span>6 min leestijd</span>
                         </div>
-                        <h3>
+                        <h2>
                             <a href="scholen-informatiebeveiliging-privacy.html">Hoe Re-Scan Monitor Solutions scholen helpt met informatiebeveiliging en privacy</a>
-                        </h3>
+                        </h2>
                         <p class="blog-post-excerpt">
                             Ontdek hoe onderwijsinstellingen hun IT-infrastructuur beveiligen en voldoen aan AVG-eisen met professionele monitoring oplossingen van Re-Scan.
                         </p>
@@ -306,7 +322,7 @@
                 <article class="blog-post-card">
                     <div class="blog-post-image">
                         <img src="https://images.unsplash.com/photo-1579275542618-a1dfed5f54ba?w=400&h=200&fit=crop"
-                             alt="Email overload concept" loading="lazy">
+                             alt="Email overload concept" loading="lazy" width="400" height="200" decoding="async">
                     </div>
                     <div class="blog-post-content">
                         <div class="blog-post-meta">
@@ -316,9 +332,9 @@
                             <span>•</span>
                             <span>5 min leestijd</span>
                         </div>
-                        <h3>
+                        <h2>
                             <a href="waarom-stoppen-mail-alerts.html">Waarom je beter kunt stoppen met mail alerts</a>
-                        </h3>
+                        </h2>
                         <p class="blog-post-excerpt">
                             Mail alerts lijken handig, maar kunnen juist contraproductief werken. Ontdek waarom en wat de betere alternatieven zijn voor effectieve monitoring van je IT infrastructuur.
                         </p>
@@ -330,23 +346,25 @@
 
                 <!-- Placeholder for future posts -->
                 <div class="blog-placeholder-kiss">
-                    <h2>Meer artikelen komen eraan</h2>
-                    <p>Wil je op de hoogte blijven van nieuwe artikelen?</p>
-                    <a href="mailto:contact@re-scan.nl?subject=Nieuwsbrief aanmelding" class="btn-kiss-inline">
-                        Blijf op de hoogte
+                    <h2>Een vraag over jouw omgeving?</h2>
+                    <p>Kom je er met een handleiding niet uit? Vertel waar je tegenaan loopt.</p>
+                    <a href="mailto:contact@re-scan.nl?subject=Vraag%20over%20PRTG" class="btn-kiss-inline">
+                        Vraag het Thomas
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
+    </main>
+
     <!-- Footer -->
     <footer class="footer-kiss">
-        <div class="container-kiss">
-            <p>Copyright &copy; 2026 Re-Scan Monitor Solutions - KvK: 94485976 | <a href="../">Home</a></p>
+        <div class="container-kiss footer-inner">
+            <p>© 2026 Re-Scan Monitor Solutions <span class="footer-divider">/</span> KvK 94485976</p>
+            <p><a href="../">Home</a> · <a href="./">Kennisbank</a></p>
         </div>
     </footer>
 
-    <script src="../js/script.js"></script>
 </body>
 </html>
