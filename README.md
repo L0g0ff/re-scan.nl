@@ -43,7 +43,7 @@ de eindstand direct. Het is een illustratie, geen live beschikbaarheidsmeting.
 Alle navigatie en contactlinks functioneren zonder JavaScript.
 
 De kop wisselt met een CSS-animatie elke vier seconden van woord, in een cyclus
-van 28 seconden. Met 'Tekst stilzetten' pauzeer je het wisselen. Bij minder
+van 28 seconden. Bij minder
 beweging blijft 'eindgebruiker' staan. De tekst voor screenreaders blijft stabiel.
 
 De gedeelde header en footer staan rechtstreeks in de HTML-documenten. Pas die

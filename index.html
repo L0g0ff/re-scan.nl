@@ -38,7 +38,6 @@
             <div class="container-kiss">
                 <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> PRTG monitoring. Helder geregeld.</p>
                 <div class="hero-copy">
-                    <input class="sr-only rotation-toggle" type="checkbox" id="pause-headline">
                     <h1 id="hero-title" class="hero-rotator" aria-label="Monitoring moet je waarschuwen. Niet je eindgebruiker, collega, opdrachtgever, manager, directie, partner of klant.">
                         <span class="hero-statement" aria-hidden="true">Monitoring moet je waarschuwen.</span>
                         <span class="hero-contrast" aria-hidden="true"><span class="rotating-words">
@@ -51,7 +50,6 @@
                             <span class="rotating-word">Niet je klant.</span>
                         </span></span>
                     </h1>
-                    <label class="rotation-control" for="pause-headline">Tekst stilzetten</label>
                 </div>
                 <p class="hero-intro">Duidelijke dashboards. Meldingen die ertoe doen.<br> Re-Scan helpt je van signaal naar oplossing.</p>
                 <div class="cta-primary">
@@ -71,6 +69,8 @@
                         <path class="flow-guide" d="M0 80H1200M200 24V136M600 24V136M1000 24V136"/>
                         <path class="flow-track" d="M0 80H280L310 66L336 96L362 80H490L518 80L540 44L568 116L600 80H1200"/>
                         <path class="flow-line" pathLength="1000" d="M0 80H280L310 66L336 96L362 80H490L518 80L540 44L568 116L600 80H1200"/>
+                        <path class="flow-pulse" pathLength="1000" d="M0 80H280L310 66L336 96L362 80H490L518 80L540 44L568 116L600 80H1200"/>
+                        <circle class="flow-ping" cx="600" cy="80" r="24"/>
                         <circle class="flow-halo" cx="600" cy="80" r="24"/>
                         <circle class="flow-node" cx="200" cy="80" r="6"/>
                         <circle class="flow-node flow-alert" cx="600" cy="80" r="6"/>
@@ -99,10 +99,16 @@
         </section>
         <section id="diensten" class="what-kiss section-space" aria-labelledby="diensten-title">
             <div class="container-kiss">
-                <div class="section-heading">
-                    <p class="eyebrow">Wat Re-Scan doet</p>
-                    <h2 id="diensten-title">Monitoring die<br>voor je werkt.</h2>
-                    <p>Een duidelijk dashboard. Meldingen die ertoe doen. En een omgeving die je team begrijpt.</p>
+                <div class="what-top">
+                    <div class="section-heading">
+                        <p class="eyebrow">Wat Re-Scan doet</p>
+                        <h2 id="diensten-title">Monitoring die<br>voor je werkt.</h2>
+                        <p>Een duidelijk dashboard. Meldingen die ertoe doen. En een omgeving die je team begrijpt.</p>
+                    </div>
+                    <figure class="ui-shot">
+                        <img src="images/prtg-new-ui.webp" alt="De nieuwe PRTG-interface: apparaatboom met het aantal sensoren per status naast een lijst van apparaten" width="1400" height="657" loading="lazy" decoding="async">
+                        <figcaption>De nieuwe PRTG-interface. Beeld: Paessler.</figcaption>
+                    </figure>
                 </div>
                 <div class="what-grid">
                     <div class="what-item"><span class="item-number" aria-hidden="true">01 /</span><h3>Bouwen</h3><p>Sensoren, dashboards en meldingen. Een solide PRTG-basis, ingericht op jouw IT-omgeving.</p></div>

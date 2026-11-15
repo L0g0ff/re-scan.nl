@@ -68,12 +68,6 @@ section[id], main[id] { scroll-margin-top: 1.5rem; }
 .rotating-word:nth-child(5) { --word-delay: -12s; }
 .rotating-word:nth-child(6) { --word-delay: -8s; }
 .rotating-word:nth-child(7) { --word-delay: -4s; }
-.rotation-toggle { display: none; }
-.rotation-control { display: none; align-items: center; justify-content: center; gap: 8px; min-height: 36px; margin-top: 8px; padding: 4px 10px; color: var(--medium-gray); font-size: .75rem; cursor: pointer; border-radius: 4px; }
-.rotation-control::before { content: ""; width: 12px; height: 12px; border: 1px solid currentColor; border-radius: 2px; }
-.rotation-toggle:checked ~ .rotation-control::before { background: var(--primary-green); box-shadow: inset 0 0 0 2px var(--white); }
-.rotation-toggle:focus-visible ~ .rotation-control { outline: 3px solid var(--primary-green); outline-offset: 3px; }
-.rotation-toggle:checked ~ .hero-rotator .rotating-word { animation-play-state: paused; }
 .hero-intro, .hero-kiss .solution { margin-top: 24px; color: var(--dark-gray); font-size: clamp(1rem, 1.5vw, 1.2rem); }
 .cta-primary { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 16px 28px; margin-top: 24px; }
 .btn-kiss, .btn, .btn-kiss-inline { display: inline-flex; align-items: center; justify-content: center; gap: 22px; padding: 13px 22px; min-height: 48px; border: 1px solid transparent; border-radius: 5px; font-size: .875rem; font-weight: 500; line-height: 1.5; text-align: center; text-decoration: none; transition: background-color .18s, border-color .18s, color .18s; }
@@ -89,6 +83,8 @@ section[id], main[id] { scroll-margin-top: 1.5rem; }
 .flow-track { stroke: #cfddcb; stroke-width: 2; }
 .flow-line { stroke: url(#line-color); stroke-width: 2; stroke-linecap: round; stroke-dasharray: 1000; stroke-dashoffset: 0; vector-effect: non-scaling-stroke; }
 .flow-node { fill: var(--primary-green); stroke: var(--canvas); stroke-width: 5; }
+.flow-pulse { stroke: var(--forest); stroke-width: 4; stroke-linecap: round; stroke-dasharray: 30 2000; stroke-dashoffset: 40; vector-effect: non-scaling-stroke; }
+.flow-ping { fill: none; stroke: #956518; stroke-width: 1.5; opacity: 0; transform-origin: 600px 80px; vector-effect: non-scaling-stroke; }
 .flow-halo { fill: var(--accent-lime); stroke: #9ac86d; stroke-width: 1; transform-origin: 600px 80px; }
 .flow-steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); padding: 0; margin: -5px 0 0; list-style: none; text-align: center; }
 .flow-steps li { display: flex; flex-direction: column; gap: 5px; }
@@ -97,13 +93,17 @@ section[id], main[id] { scroll-margin-top: 1.5rem; }
 .flow-steps li > span:last-child { color: var(--medium-gray); font-size: .75rem; }
 @media (prefers-reduced-motion: no-preference) {
     html { scroll-behavior: smooth; }
-    .rotation-toggle { display: block; }
     .rotating-word { animation: rotate-hero-word 28s linear infinite; animation-delay: var(--word-delay, 0s); }
-    .rotation-control { display: inline-flex; }
     .flow-line { animation: trace-signal 4s ease-in-out both; }
     .flow-halo { animation: detect-signal 4s ease-in-out both; }
-    .flow-alert { animation: resolve-signal 4s ease-in-out both; }
+    .flow-alert { animation: resolve-signal 4s ease-in-out both, alert-loop 5s 4s linear infinite; }
+    .flow-pulse { animation: pulse-signal 5s 4s linear infinite; }
+    .flow-ping { animation: ping-signal 5s 4s linear infinite; }
 }
+/* The pulse runs the line in 4 of every 5 seconds and passes Signaleren at 43%. */
+@keyframes pulse-signal { 0% { stroke-dashoffset: 40; } 80%, 100% { stroke-dashoffset: -1010; } }
+@keyframes ping-signal { 0%, 42% { opacity: 0; transform: scale(1); } 44% { opacity: .9; } 72%, 100% { opacity: 0; transform: scale(2.6); } }
+@keyframes alert-loop { 0%, 41%, 62%, 100% { fill: var(--primary-green); } 44%, 54% { fill: #c98a1e; } }
 /* Seven words, four seconds each; crossfade for the last 0.4 seconds. */
 @keyframes rotate-hero-word {
     0%, 12.85714% { opacity: 1; }
@@ -125,6 +125,10 @@ section[id], main[id] { scroll-margin-top: 1.5rem; }
 .client-logos a { display: flex; justify-content: center; align-items: center; height: 112px; padding: 12px; border-radius: 6px; }
 .client-logos a:hover { background: var(--light-gray); }
 .client-logos img { display: block; width: 180px; height: auto; max-width: 100%; max-height: 88px; object-fit: contain; }
+@media (hover: hover) {
+    .client-logos img { filter: grayscale(1); opacity: .65; transition: filter .2s, opacity .2s; }
+    .client-logos a:hover img, .client-logos a:focus-visible img { filter: none; opacity: 1; }
+}
 .client-logos .client-logo-sovot { width: 120px; }
 .client-logos .client-logo-cubics { width: 144px; }
 .client-logos .client-logo-mag45 { width: 158px; }
@@ -138,7 +142,12 @@ section[id], main[id] { scroll-margin-top: 1.5rem; }
     .client-logos a { height: 100px; }
     .client-logos img { max-height: 76px; }
 }
-.what-kiss { background: var(--light-gray); border-block: 1px solid var(--line); }
+.what-kiss { background: var(--light-gray); border-block: 1px solid var(--line); overflow-x: clip; }
+.what-top { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 56px; align-items: center; margin-bottom: 56px; }
+.what-top .section-heading { margin-bottom: 0; }
+.ui-shot { perspective: 1600px; }
+.ui-shot img { display: block; width: 100%; border: 1px solid #bdccba; border-radius: 10px; box-shadow: 0 40px 80px -36px rgba(21, 63, 49, .55); transform: rotateY(-14deg) rotateX(5deg); transform-origin: left center; }
+.ui-shot figcaption { margin-top: 30px; color: var(--medium-gray); font-size: .75rem; text-align: right; }
 .section-heading { max-width: 720px; margin-bottom: 48px; }
 .section-heading h2 { margin-top: 16px; }
 .section-heading > p:last-child:not(.eyebrow) { margin-top: 22px; color: var(--dark-gray); max-width: 540px; }
@@ -149,6 +158,8 @@ section[id], main[id] { scroll-margin-top: 1.5rem; }
 .what-item p { color: var(--dark-gray); max-width: 34ch; font-size: .95rem; }
 .pricing-grid-kiss { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
 .price-card { display: flex; flex-direction: column; min-width: 0; border: 1px solid var(--line); border-radius: 8px; padding: clamp(24px, 2.7vw, 40px); background: var(--white); }
+.price-card { transition: transform .2s, box-shadow .2s, border-color .2s; }
+.price-card:hover { transform: translateY(-4px); border-color: var(--primary-green); box-shadow: 0 24px 48px -30px rgba(21, 63, 49, .5); }
 .price-card h3 { font-size: 1.25rem; }
 .price-tagline { color: var(--medium-gray); font-size: .85rem; margin-top: 8px; min-height: 2.8em; }
 .price-big { font-size: clamp(2.8rem, 3.8vw, 3.5rem); letter-spacing: -.055em; line-height: 1.2; margin-top: 30px; }
@@ -189,6 +200,15 @@ a.text-link:hover { text-decoration: underline; }
 .footer-divider { margin-inline: 12px; color: var(--medium-gray); }
 .error-page .hero-kiss { padding-bottom: 80px; }
 .error-page .hero-kiss h1 { font-size: clamp(3rem, 6vw, 5rem); }
+/* Scroll-linked motion needs no script; other browsers keep the static layout. */
+@supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+        .section-heading, .what-item, .price-card, .sensor-audit-callout, .knowledge-link, .contact-layout > * { animation: reveal linear backwards; animation-timeline: view(); animation-range: entry 0% entry 40%; }
+        .ui-shot img { animation: flatten linear both; animation-timeline: view(); animation-range: entry 20% cover 50%; }
+    }
+}
+@keyframes reveal { from { opacity: 0; transform: translateY(28px); } }
+@keyframes flatten { to { transform: none; } }
 @media (max-width: 1000px) {
     .container-kiss { width: calc(100% - 64px); }
     .what-grid { gap: 28px; }
@@ -217,7 +237,9 @@ a.text-link:hover { text-decoration: underline; }
     .flow-steps strong { font-size: .8rem; }
     .flow-steps li > span:last-child { font-size: .65rem; line-height: 1.5; max-width: 16ch; align-self: center; }
     .section-heading { margin-bottom: 32px; }
-    .what-grid, .pricing-grid-kiss { grid-template-columns: 1fr; }
+    .what-grid, .pricing-grid-kiss, .what-top { grid-template-columns: 1fr; }
+    .what-top { gap: 32px; margin-bottom: 40px; }
+    .ui-shot img { transform: rotateX(10deg); transform-origin: center bottom; }
     .what-grid { gap: 32px; }
     .what-item h3 { margin-top: 12px; }
     .what-item p { max-width: 48ch; }

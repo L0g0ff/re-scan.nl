@@ -26,23 +26,29 @@ De website blijft statische HTML en CSS, zonder runtime-JavaScript of buildstap.
 
 De SVG op de homepage illustreert Meten, Signaleren en Ingrijpen.
 Het is geen live statusweergave. Eén CSS-sequentie van vier seconden tekent de
-lijn en markeert een signaal. Daarna staat het beeld stil. Alle tekst en
+lijn en markeert een signaal. Daarna loopt elke vijf seconden een puls over de
+lijn; bij Signaleren kleurt het punt kort amber. Alle tekst en
 contactmogelijkheden zijn vanaf het begin zichtbaar.
+
+Op verzoek heeft de homepage enkele blikvangers, allemaal in CSS: de
+PRTG-screenshot staat schuin en kantelt vlak bij het scrollen, secties schuiven
+in beeld, prijskaarten lichten op bij hover. Scrollgestuurde delen staan binnen
+`@supports (animation-timeline: view())`; andere browsers tonen de vaste opmaak.
 
 De kop wisselt op verzoek elke vier seconden tussen eindgebruiker, collega,
 opdrachtgever, manager, directie, partner en klant. De woorden staan in
 hetzelfde gridvak: het langste woord bepaalt de breedte, zodat de kop niet
-verspringt. 'Tekst stilzetten' pauzeert de CSS-animatie; bij hervatten loopt
-deze verder. De screenreader krijgt één vaste, volledige zin.
+verspringt. De screenreader krijgt één vaste, volledige zin.
 
 Bij `prefers-reduced-motion: reduce` staat de illustratie direct in de eindstand
-en blijft de kop op 'eindgebruiker' staan. De pauzebediening is dan verborgen.
-Alleen de gevraagde woordrotatie herhaalt; geen scrollgestuurde effecten.
+en blijft de kop op 'eindgebruiker' staan;
+puls, scrolleffecten en hoverbeweging staan uit.
 
 ## Onderdelen
 
 - Gedeelde header met altijd zichtbare navigatie, ook op mobiel.
-- Een vaste rij klantlogo's onder de opening, lokaal geladen in originele kleuren.
+- Een vaste rij klantlogo's onder de opening, lokaal geladen. Met een muis zijn
+  ze grijs en krijgen ze kleur bij hover; op aanraakschermen altijd in kleur.
   Op kleine schermen lopen de logo's over meerdere rijen; geen carrousel.
 - Eén primaire contactactie, met bellen als alternatief.
 - Drie flexibele prijskaarten met dezelfde opbouw en een eigen mailonderwerp.
