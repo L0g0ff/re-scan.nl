@@ -198,6 +198,18 @@ a.text-link:hover { text-decoration: underline; }
 .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
 .footer-kiss a { color: var(--dark-gray); display: inline-block; padding-block: 10px; }
 .footer-divider { margin-inline: 12px; color: var(--medium-gray); }
+/* Service pages reuse the homepage parts; only the layout differs. */
+.page-hero { padding-bottom: clamp(56px, 6vw, 88px); }
+.page-hero h1 { max-width: 20ch; margin-inline: auto; font-size: clamp(2rem, 4.6vw, 4rem); }
+.page-hero h1 span { display: block; }
+.service-layout { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 56px; align-items: start; }
+.service-points { display: grid; gap: 28px; }
+.service-layout > .price-card { position: sticky; top: 24px; }
+.service-points .what-item h3 { margin-top: 0; }
+.service-points .what-item p { max-width: 52ch; }
+h3 a { color: inherit; text-decoration-thickness: 1px; }
+h3 a:hover { color: var(--primary-green); }
+.sensor-audit-text h3 a:hover { color: var(--accent-lime); }
 .error-page .hero-kiss { padding-bottom: 80px; }
 .error-page .hero-kiss h1 { font-size: clamp(3rem, 6vw, 5rem); }
 /* Scroll-linked motion needs no script; other browsers keep the static layout. */
@@ -251,6 +263,7 @@ a.text-link:hover { text-decoration: underline; }
     .section-heading-inline > a { margin-top: 16px; }
     .knowledge-grid { gap: 24px; }
     .contact-layout { grid-template-columns: 1fr; gap: 24px; }
+    .service-layout { grid-template-columns: 1fr; gap: 32px; }
     .footer-inner { align-items: flex-start; flex-direction: column; gap: 2px; }
     .footer-divider { margin-inline: 4px; }
 }

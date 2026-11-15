@@ -16,6 +16,10 @@ Open `http://127.0.0.1:8765`. Stop de server met Ctrl+C.
 ## Structuur
 
 - `index.html`: homepage, diensten, tarieven, kennisbankselectie en contact.
+- `prtg-consultancy.html`, `prtg-hosting.html`, `prtg-training.html`, `prtg-sensor-audit.html`:
+  een pagina per dienst, met dezelfde header, footer en contactstrook als de homepage.
+- `llms.txt`: korte samenvatting van diensten en artikelen voor AI-crawlers. Werk dit
+  bij wanneer een dienst, prijs of artikel verandert.
 - `blog/`: overzicht en twaalf artikelen met bestaande URL's.
 - `css/style.css`: gedeelde opmaak en de monitoringanimatie.
 - `css/blog.css`: leeskolom, artikeloverzicht, zijbalk en codeblokken.

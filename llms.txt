@@ -1,0 +1,27 @@
+# Re-Scan Monitor Solutions
+
+> Re-Scan Monitor Solutions (Thomas Faddegon, Tilburg) helpt organisaties met PRTG Network Monitor: consultancy, hosting, training en sensor-audits.
+
+Contact: contact@re-scan.nl, +31638254639. KvK 94485976. De site is Nederlandstalig.
+
+## Diensten
+
+- [PRTG consultancy](https://www.re-scan.nl/prtg-consultancy.html): PRTG consultant voor installatie, maatwerksensoren, migraties en storingen. €125 per uur, no cure / no pay. Je werkt rechtstreeks met Thomas Faddegon.
+- [PRTG hosting](https://www.re-scan.nl/prtg-hosting.html): Gehoste PRTG-omgeving met 500 sensoren, maandelijkse rapportages en een TV-dashboardadapter. €300 per maand, maandelijks opzegbaar.
+- [PRTG training](https://www.re-scan.nl/prtg-training.html): PRTG training voor je team: introductie, een maatwerksensor maken en een dashboard opzetten. €999 per dag, op locatie of op afstand.
+- [PRTG sensor-audit](https://www.re-scan.nl/prtg-sensor-audit.html): PRTG te duur geworden? Een sensor-audit brengt in kaart welke sensoren écht bijdragen, met concreet advies om je licentiekosten te verlagen.
+
+## Kennisbank
+
+- [PRTG Sensoren Consolideren: Licentiekosten Verlagen Zonder Concessies](https://www.re-scan.nl/blog/prtg-sensoren-consolideren-kosten-besparen.html): PRTG te duur geworden? Leer hoe je met sensor consolidatie je licentietier verlaagt zonder monitorcoverage te verliezen. Praktische strategieën en concrete voorbeelden.
+- [Teams Webhook Aanmaken voor PRTG Notificaties](https://www.re-scan.nl/blog/teams-webhook-prtg-notificaties.html): Stap-voor-stap handleiding: maak een Microsoft Teams webhook aan via Workflows en koppel deze aan PRTG voor directe monitoring meldingen in je Teams kanaal.
+- [JSONPath in PRTG REST Custom v2 Sensor: Complete Handleiding](https://www.re-scan.nl/blog/jsonpath-rest-custom-v2-sensor-handleiding.html): Leer JSONPath gebruiken in PRTG REST Custom v2 sensors. Van basis JSON parsing tot geavanceerde filtering en aggregatie. Inclusief praktische voorbeelden.
+- [PRTG Error PE206 Oplossen: HTTP IoT Push Receiver Fix](https://www.re-scan.nl/blog/prtg-error-pe206-http-iot-push-receiver-fix.html): Stap-voor-stap oplossing voor PRTG error PE206 bij HTTP IoT Push Data Advanced sensors. SSL certificaten fix voor remote probes in 5 minuten.
+- [Van WordPress naar Statische Website in 2 Uur - Dankzij AI](https://www.re-scan.nl/blog/wordpress-naar-statisch-met-ai.html): Hoe ik mijn WordPress website in 2 uur volledig ombouwde naar statische content met GitHub Actions, zonder één regel HTML te schrijven. De kracht van AI-assisted development.
+- [Monitoring alerting optimaliseren: van spam naar nuttige notificaties](https://www.re-scan.nl/blog/monitoring-alerting-optimaliseren-spam-nuttige-notificaties.html): Leer hoe je monitoring alerts optimaliseert van 50+ meldingen naar 2-3 relevante notificaties per dag. Van reactief naar proactief werken met slimme alerting.
+- [Eenvoudig PRTG Dashboard Aanpassen met CSS](https://www.re-scan.nl/blog/eenvoudig-prtg-dashboard-aanpassen-css.html): Leer hoe je je PRTG dashboard eenvoudig aanpast met CSS om acknowledged meldingen te filteren. Een simpele truc voor een overzichtelijker monitoring interface.
+- [Website Monitoring en Troubleshooting met PRTG](https://www.re-scan.nl/blog/website-monitoring-troubleshooting.html): Leer hoe je effectief websites monitort met PRTG HTTP Advanced sensoren. Ontdek problemen voordat klanten ze merken en los storingen snel op.
+- [WMI Gebruikersrechten op een Verantwoorde Manier](https://www.re-scan.nl/blog/wmi-gebruikersrechten-verantwoorde-manier.html): Leer hoe je WMI gebruikersrechten veilig configureert voor PRTG monitoring volgens het Zero Trust principe. Praktische stappen en best practices.
+- [Waarom je Beter kunt stoppen Met Mail Alerts](https://www.re-scan.nl/blog/waarom-stoppen-mail-alerts.html): Mail alerts lijken handig, maar kunnen contraproductief werken. Ontdek waarom en wat de betere alternatieven zijn voor effectieve monitoring.
+- [Hoe Re-Scan Monitor Solutions scholen helpt met informatiebeveiliging en privacy](https://www.re-scan.nl/blog/scholen-informatiebeveiliging-privacy.html): Ontdek hoe Re-Scan Monitor Solutions onderwijsinstellingen ondersteunt bij informatiebeveiliging, privacy compliance en het beschermen van leerlinggegevens.
+- [Hoe het vernieuwde Normenkader IBP te integreren in je monitor omgeving](https://www.re-scan.nl/blog/normenkader-ibp-monitor-omgeving.html): Ontdek hoe je het IBP Normenkader effectief integreert in je monitoring omgeving met PRTG. Praktische tips voor configuratiemanagement, incidentmanagement en meer.

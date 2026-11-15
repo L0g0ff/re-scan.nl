@@ -58,6 +58,10 @@ puls, scrolleffecten en hoverbeweging staan uit.
 
 ## Inhoud en onderhoud
 
+Prijzen en dienstomschrijvingen staan op de homepage, op de dienstpagina, in de
+JSON-LD van beide en in `llms.txt`. Pas ze op alle vier de plekken aan.
+Geen analytics, trackers of cookies.
+
 Behoud bestaande URL's. Voeg geen klantnamen, resultaten, garanties,
 btw-aannames of voorwaarden toe zonder inhoudelijke bevestiging.
 Wijzig gedeelde navigatie en footer consequent in alle HTML-documenten.

@@ -8,6 +8,32 @@
         <priority>1.0</priority>
     </url>
 
+    <!-- Service pages -->
+    <url>
+        <loc>https://www.re-scan.nl/prtg-consultancy.html</loc>
+        <lastmod>2026-11-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://www.re-scan.nl/prtg-hosting.html</loc>
+        <lastmod>2026-11-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://www.re-scan.nl/prtg-training.html</loc>
+        <lastmod>2026-11-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://www.re-scan.nl/prtg-sensor-audit.html</loc>
+        <lastmod>2026-11-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
     <!-- Blog index -->
     <url>
         <loc>https://www.re-scan.nl/blog/</loc>
