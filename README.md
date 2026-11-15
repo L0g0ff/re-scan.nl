@@ -55,7 +55,9 @@ bij wijzigingen consequent aan. Kleuren en breedte staan in `:root` in `css/styl
 Tarieven staan op de homepage; publicatie- en wijzigingsdatums van artikelen staan
 in de JSON-LD. Werk sitemapdatums bij wanneer een pagina daadwerkelijk verandert.
 
-Contact werkt via `mailto:` en `tel:`. Er is geen contactformulier of formulierbackend.
+Contact werkt via drie knoppen: Signal (`signal.me`), WhatsApp (`wa.me`) en `mailto:`,
+bovenaan en onderaan elke pagina. Er staat bewust geen belnummer op de site. De iconen staan inline in de HTML (Signal en WhatsApp uit Simple Icons, CC0).
+Er is geen contactformulier of formulierbackend.
 Blogartikelen bevatten deels externe Unsplash-afbeeldingen; de homepage doet geen
 externe assetverzoeken. Lokale linkcontroles verifiëren geen externe afbeeldingen.
 

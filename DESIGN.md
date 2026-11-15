@@ -50,7 +50,7 @@ puls, scrolleffecten en hoverbeweging staan uit.
 - Een vaste rij klantlogo's onder de opening, lokaal geladen. Met een muis zijn
   ze grijs en krijgen ze kleur bij hover; op aanraakschermen altijd in kleur.
   Op kleine schermen lopen de logo's over meerdere rijen; geen carrousel.
-- Eén primaire contactactie, met bellen als alternatief.
+- Drie gelijkwaardige contactknoppen: Signal, WhatsApp en mail. Geen belnummer.
 - Drie flexibele prijskaarten met dezelfde opbouw en een eigen mailonderwerp.
 - Dezelfde knoppen, focusmarkering en footer op homepage en kennisbank.
 - Elk document heeft een hoofdinhoud en een overslaanlink.
